@@ -2640,6 +2640,8 @@ extern __bank0 __bit __timeout;
 
 
 void ADC_CONFIG(uint8_t canal, uint8_t justif);
+
+void ADC_INTERRUPT(void);
 # 9 "ADC.c" 2
 
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c90\\stdint.h" 1 3
@@ -2648,6 +2650,7 @@ void ADC_CONFIG(uint8_t canal, uint8_t justif);
 
 void ADC_CONFIG(uint8_t canal, uint8_t justif){
     ADCON0bits.ADON = 1;
+    ADCON0bits.GO = 1;
     ADCON0bits.ADCS = 1;
     ADCON1bits.VCFG0 = 0;
     ADCON1bits.VCFG1 = 0;
@@ -2745,4 +2748,11 @@ void ADC_CONFIG(uint8_t canal, uint8_t justif){
             ADCON1bits.ADFM = 1;
             break;
     }
+}
+
+void ADC_INTERRUPT(void){
+    PIR1bits.ADIF = 0;
+    PIE1bits.ADIE = 1;
+    INTCONbits.GIE = 1;
+    INTCONbits.PEIE = 1;
 }

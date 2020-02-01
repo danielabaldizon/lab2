@@ -11,6 +11,7 @@
 
 void ADC_CONFIG(uint8_t canal, uint8_t justif){
     ADCON0bits.ADON = 1; //FOSC/8
+    ADCON0bits.GO = 1;              //INICIA EL ADC
     ADCON0bits.ADCS = 1;
     ADCON1bits.VCFG0 = 0; //VDD
     ADCON1bits.VCFG1 = 0; // VSS
@@ -110,3 +111,9 @@ void ADC_CONFIG(uint8_t canal, uint8_t justif){
     }
 }
 
+void ADC_INTERRUPT(void){
+    PIR1bits.ADIF = 0; //BANDERA
+    PIE1bits.ADIE = 1; //HABILITA LA INTERRUPCION
+    INTCONbits.GIE = 1; //PERIFERICOS
+    INTCONbits.PEIE = 1;
+}

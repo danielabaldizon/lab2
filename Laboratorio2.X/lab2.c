@@ -27,19 +27,25 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
+#include "ADC.h"
 
 #define _XTAL_FREQ 4000000
 
 uint8_t cont = 0;
 uint8_t AR1 = 0;
 uint8_t AR2 = 0;
+uint8_t madc;
 
 // PROTOTIPO DE FUNCIONES
 void botones(void);
+void adc(void);
 
 void __interrupt() ISR(void){
     if (INTCONbits.RBIF  == 1){
         botones();
+    }
+    if (PIR1bits.ADIF == 1){
+        adc();
     }
     
 }
@@ -53,7 +59,12 @@ TRISC = 0;
 TRISBbits.TRISB7 = 1;
 TRISBbits.TRISB6 = 1;
 OPTION_REG = 0b11100111;
+OSCCONbits.IRCF = 7;
+OSCCONbits.SCS = 1;
 
+// CONFIGURACION DEL ADC
+ADC_CONFIG(0, 0);
+ADC_INTERRUPT();
 
 //INTERRUPCIÓN DE PUERTO B
 IOCBbits.IOCB7 = 1;
@@ -67,14 +78,17 @@ INTCONbits.RBIF = 0;
 
 
 //LIMPIEZA DE VARIABLES Y PUERTOS
-PORTC = 0;
+PORTC = 1;
 PORTD = 0;
+
 
 
 //INICIO DEL LOOP INFINITO
 while(1){
     PORTD = cont;
-    
+    PORTC = madc;
+    ADCON0bits.GO = 1;              //INICIA EL ADC
+        
 }
 
 }
@@ -103,4 +117,12 @@ void botones (void){
              }
     }
     INTCONbits.RBIF = 0;
+}
+
+void adc(void){
+   
+    
+   // while (ADCON0bits.GO == 1){};   //ESPERA A LA LECTURA
+    madc = ADRESH;
+    PIR1bits.ADIF = 0;
 }

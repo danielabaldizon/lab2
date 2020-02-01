@@ -2838,19 +2838,37 @@ typedef int16_t intptr_t;
 typedef uint16_t uintptr_t;
 # 29 "lab2.c" 2
 
+# 1 "./ADC.h" 1
+# 10 "./ADC.h"
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c90\\stdint.h" 1 3
+# 10 "./ADC.h" 2
+
+
+
+
+void ADC_CONFIG(uint8_t canal, uint8_t justif);
+
+void ADC_INTERRUPT(void);
+# 30 "lab2.c" 2
+
 
 
 
 uint8_t cont = 0;
 uint8_t AR1 = 0;
 uint8_t AR2 = 0;
+uint8_t madc;
 
 
 void botones(void);
+void adc(void);
 
 void __attribute__((picinterrupt(("")))) ISR(void){
     if (INTCONbits.RBIF == 1){
         botones();
+    }
+    if (PIR1bits.ADIF == 1){
+        adc();
     }
 
 }
@@ -2864,7 +2882,12 @@ TRISC = 0;
 TRISBbits.TRISB7 = 1;
 TRISBbits.TRISB6 = 1;
 OPTION_REG = 0b11100111;
+OSCCONbits.IRCF = 7;
+OSCCONbits.SCS = 1;
 
+
+ADC_CONFIG(0, 0);
+ADC_INTERRUPT();
 
 
 IOCBbits.IOCB7 = 1;
@@ -2878,13 +2901,16 @@ INTCONbits.RBIF = 0;
 
 
 
-PORTC = 0;
+PORTC = 1;
 PORTD = 0;
+
 
 
 
 while(1){
     PORTD = cont;
+    PORTC = madc;
+    ADCON0bits.GO = 1;
 
 }
 
@@ -2914,4 +2940,12 @@ void botones (void){
              }
     }
     INTCONbits.RBIF = 0;
+}
+
+void adc(void){
+
+
+
+    madc = ADRESH;
+    PIR1bits.ADIF = 0;
 }
