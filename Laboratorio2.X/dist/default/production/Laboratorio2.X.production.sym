@@ -61,8 +61,11 @@ __Ltext 0 0 ABS 0
 end_of_initialization 12 0 CODE 0
 __size_of_ISR 0 0 ABS 0
 ___stacklo 0 0 ABS 0
+_TRISAbits 85 0 ABS 0
 _TRISBbits 86 0 ABS 0
 _PORTBbits 6 0 ABS 0
+_TRISEbits 89 0 ABS 0
+_ANSELbits 188 0 ABS 0
 __Hstrings 0 0 ABS 0
 __Lstrings 0 0 ABS 0
 __Hbank0 0 0 ABS 0
@@ -100,10 +103,12 @@ __Lspace_3 0 0 ABS 0
 __size_of_main 0 0 ABS 0
 __CFG_MCLRE$OFF 0 0 ABS 0
 __CFG_FCMEN$OFF 0 0 ABS 0
+_ADCON0bits 1F 0 ABS 0
 __CFG_BOREN$OFF 0 0 ABS 0
 __CFG_PWRTE$OFF 0 0 ABS 0
 __HbssCOMMON 0 0 ABS 0
 __LbssCOMMON 0 0 ABS 0
+_ANSELHbits 189 0 ABS 0
 __pbssCOMMON 74 0 COMMON 1
 _INTCONbits B 0 ABS 0
 __Hend_init F 0 CODE 0
@@ -139,15 +144,15 @@ config 400E 4011 CONFIG 400E 0
 cstackCOMMON 70 76 COMMON 70 1
 %locals
 dist/default/production\Laboratorio2.X.production.o
-C:\Users\DANIEL~1\AppData\Local\Temp\sbpo.s
-463 F 0 CODE 0
-466 F 0 CODE 0
-483 F 0 CODE 0
-484 10 0 CODE 0
-485 11 0 CODE 0
-491 12 0 CODE 0
-493 12 0 CODE 0
-494 13 0 CODE 0
+C:\Users\DANIEL~1\AppData\Local\Temp\s6ro.s
+629 F 0 CODE 0
+632 F 0 CODE 0
+649 F 0 CODE 0
+650 10 0 CODE 0
+651 11 0 CODE 0
+657 12 0 CODE 0
+659 12 0 CODE 0
+660 13 0 CODE 0
 lab2.c
 47 51 0 CODE 0
 49 51 0 CODE 0
