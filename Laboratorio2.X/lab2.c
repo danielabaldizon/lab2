@@ -39,27 +39,7 @@ void botones(void);
 
 void __interrupt() ISR(void){
     if (INTCONbits.RBIF  == 1){
-         if (PORTBbits.RB7 == 0){
-        AR1 = 1;
-    }
-         else{
-             if (AR1 == 1){
-                 cont++;
-                 AR1 = 0;
-                 __delay_ms(25);
-             }
-         }
-    if (PORTBbits.RB6 == 0){
-        AR2 = 1;
-    }
-         else{
-             if (AR2 == 1){
-                 cont = cont - 1;
-                 AR2 = 0;
-                 __delay_ms(25);
-             }
-    }
-    INTCONbits.RBIF = 0;
+        botones();
     }
     
 }
@@ -103,10 +83,24 @@ while(1){
 void botones (void){
     
     if (PORTBbits.RB7 == 0){
-        PORTD++;
+        AR1 = 1;
     }
+         else{
+             if (AR1 == 1){
+                 cont++;
+                 AR1 = 0;
+                 __delay_ms(25);
+             }
+         }
     if (PORTBbits.RB6 == 0){
-        PORTD--;
+        AR2 = 1;
     }
-    RBIF = 0;
+         else{
+             if (AR2 == 1){
+                 cont = cont - 1;
+                 AR2 = 0;
+                 __delay_ms(25);
+             }
+    }
+    INTCONbits.RBIF = 0;
 }
