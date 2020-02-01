@@ -10,12 +10,12 @@
 #include <stdint.h>
 
 void ADC_CONFIG(uint8_t canal, uint8_t justif){
-    ADCON0bits.ADON = 1;
+    ADCON0bits.ADON = 1; //FOSC/8
     ADCON0bits.ADCS = 1;
-    ADCON1bits.VCFG0 = 0;
-    ADCON1bits.VCFG1 = 0;
+    ADCON1bits.VCFG0 = 0; //VDD
+    ADCON1bits.VCFG1 = 0; // VSS
     
-    switch(canal){
+    switch(canal){ // CANAL PARA EL ADC
         case 0:
             ANSELbits.ANS0 = 1;
             ADCON0bits.CHS = 0;
@@ -100,7 +100,7 @@ void ADC_CONFIG(uint8_t canal, uint8_t justif){
             TRISBbits.TRISB5 = 1;
             break;
     }
-    switch(justif){
+    switch(justif){ // JUSTIFIACION
         case 0: //IZQUIERDA
             ADCON1bits.ADFM = 0;
             break;

@@ -89,7 +89,7 @@
 ]
 [u S147 . 1 `S136 1 . 1 0 `S143 1 . 1 0 ]
 [v _OPTION_REGbits OPTION_REGbits `VES147  1 e 1 @129 ]
-[s S318 . 1 `uc 1 TRISA0 1 0 :1:0 
+[s S333 . 1 `uc 1 TRISA0 1 0 :1:0 
 `uc 1 TRISA1 1 0 :1:1 
 `uc 1 TRISA2 1 0 :1:2 
 `uc 1 TRISA3 1 0 :1:3 
@@ -99,8 +99,8 @@
 `uc 1 TRISA7 1 0 :1:7 
 ]
 "1433
-[u S327 . 1 `S318 1 . 1 0 ]
-[v _TRISAbits TRISAbits `VES327  1 e 1 @133 ]
+[u S342 . 1 `S333 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES342  1 e 1 @133 ]
 [s S62 . 1 `uc 1 TRISB0 1 0 :1:0 
 `uc 1 TRISB1 1 0 :1:1 
 `uc 1 TRISB2 1 0 :1:2 
@@ -117,14 +117,14 @@
 [v _TRISC TRISC `VEuc  1 e 1 @135 ]
 "1602
 [v _TRISD TRISD `VEuc  1 e 1 @136 ]
-[s S339 . 1 `uc 1 TRISE0 1 0 :1:0 
+[s S354 . 1 `uc 1 TRISE0 1 0 :1:0 
 `uc 1 TRISE1 1 0 :1:1 
 `uc 1 TRISE2 1 0 :1:2 
 `uc 1 TRISE3 1 0 :1:3 
 ]
 "1677
-[u S344 . 1 `S339 1 . 1 0 ]
-[v _TRISEbits TRISEbits `VES344  1 e 1 @137 ]
+[u S359 . 1 `S354 1 . 1 0 ]
+[v _TRISEbits TRISEbits `VES359  1 e 1 @137 ]
 [s S110 . 1 `uc 1 WPUB 1 0 :8:0 
 ]
 "2366
@@ -153,9 +153,18 @@
 ]
 [u S95 . 1 `S84 1 . 1 0 `S86 1 . 1 0 ]
 [v _IOCBbits IOCBbits `VES95  1 e 1 @150 ]
+[s S297 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 VCFG0 1 0 :1:4 
+`uc 1 VCFG1 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 ADFM 1 0 :1:7 
+]
+"2991
+[u S303 . 1 `S297 1 . 1 0 ]
+[v _ADCON1bits ADCON1bits `VES303  1 e 1 @159 ]
 "3387
 [v _ANSEL ANSEL `VEuc  1 e 1 @392 ]
-[s S297 . 1 `uc 1 ANS0 1 0 :1:0 
+[s S312 . 1 `uc 1 ANS0 1 0 :1:0 
 `uc 1 ANS1 1 0 :1:1 
 `uc 1 ANS2 1 0 :1:2 
 `uc 1 ANS3 1 0 :1:3 
@@ -165,11 +174,11 @@
 `uc 1 ANS7 1 0 :1:7 
 ]
 "3404
-[u S306 . 1 `S297 1 . 1 0 ]
-[v _ANSELbits ANSELbits `VES306  1 e 1 @392 ]
+[u S321 . 1 `S312 1 . 1 0 ]
+[v _ANSELbits ANSELbits `VES321  1 e 1 @392 ]
 "3449
 [v _ANSELH ANSELH `VEuc  1 e 1 @393 ]
-[s S352 . 1 `uc 1 ANS8 1 0 :1:0 
+[s S367 . 1 `uc 1 ANS8 1 0 :1:0 
 `uc 1 ANS9 1 0 :1:1 
 `uc 1 ANS10 1 0 :1:2 
 `uc 1 ANS11 1 0 :1:3 
@@ -177,8 +186,8 @@
 `uc 1 ANS13 1 0 :1:5 
 ]
 "3464
-[u S359 . 1 `S352 1 . 1 0 ]
-[v _ANSELHbits ANSELHbits `VES359  1 e 1 @393 ]
+[u S374 . 1 `S367 1 . 1 0 ]
+[v _ANSELHbits ANSELHbits `VES374  1 e 1 @393 ]
 "33 C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
 [v _cont cont `uc  1 e 1 0 ]
 "34

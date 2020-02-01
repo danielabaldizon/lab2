@@ -2639,16 +2639,19 @@ extern __bank0 __bit __timeout;
 # 12 "./ADC.h" 2
 
 
-void ADC_CONFIG(uint8_t canal);
+void ADC_CONFIG(uint8_t canal, uint8_t justif);
 # 9 "ADC.c" 2
 
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c90\\stdint.h" 1 3
 # 10 "ADC.c" 2
 
 
-void ADC_CONFIG(uint8_t canal){
+void ADC_CONFIG(uint8_t canal, uint8_t justif){
     ADCON0bits.ADON = 1;
     ADCON0bits.ADCS = 1;
+    ADCON1bits.VCFG0 = 0;
+    ADCON1bits.VCFG1 = 0;
+
     switch(canal){
         case 0:
             ANSELbits.ANS0 = 1;
@@ -2732,6 +2735,14 @@ void ADC_CONFIG(uint8_t canal){
             ANSELHbits.ANS13 = 1;
             ADCON0bits.CHS = 13;
             TRISBbits.TRISB5 = 1;
+            break;
+    }
+    switch(justif){
+        case 0:
+            ADCON1bits.ADFM = 0;
+            break;
+        case 1:
+            ADCON1bits.ADFM = 1;
             break;
     }
 }
