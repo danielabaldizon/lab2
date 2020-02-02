@@ -27,18 +27,37 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
+#include <pic16f887.h>
 #include "ADC.h"
+#include "7SEGMENTOS.h"
 
 #define _XTAL_FREQ 4000000
+
+// 7 SEGMENTOS
+#define a PORTCbits.RC0
+#define b PORTCbits.RC1
+#define c PORTCbits.RC2
+#define d PORTCbits.RC3
+#define e PORTCbits.RC4
+#define f PORTCbits.RC5
+#define g PORTCbits.RC6
+#define dp PORTCbits.RC7 
+
 
 uint8_t cont = 0;
 uint8_t AR1 = 0;
 uint8_t AR2 = 0;
 uint8_t madc;
+uint8_t AL = 0;
+uint8_t AH;
+uint8_t AHM;
+uint8_t AHL;
 
 // PROTOTIPO DE FUNCIONES
 void botones(void);
 void adc(void);
+void InitTimer0();
+void Interrupt();
 
 void __interrupt() ISR(void){
     if (INTCONbits.RBIF  == 1){
@@ -47,6 +66,9 @@ void __interrupt() ISR(void){
     if (PIR1bits.ADIF == 1){
         adc();
     }
+    if (INTCONbits.T0IF == 1){ 
+    Interrupt();
+  }
     
 }
 
@@ -56,7 +78,10 @@ ANSELH = 0;
 ANSEL = 0;
 TRISD = 0;
 TRISC = 0;
-TRISBbits.TRISB7 = 1;
+TRISAbits.TRISA6 = 0; //TRANSISTORES
+TRISAbits.TRISA7 = 0;
+TRISAbits.TRISA5 = 0; //alrm
+TRISBbits.TRISB7 = 1; // botones
 TRISBbits.TRISB6 = 1;
 OPTION_REG = 0b11100111;
 OSCCONbits.IRCF = 7;
@@ -65,6 +90,10 @@ OSCCONbits.SCS = 1;
 // CONFIGURACION DEL ADC
 ADC_CONFIG(0, 0);
 ADC_INTERRUPT();
+
+//TMR0
+InitTimer0();
+
 
 //INTERRUPCIÓN DE PUERTO B
 IOCBbits.IOCB7 = 1;
@@ -78,17 +107,17 @@ INTCONbits.RBIF = 0;
 
 
 //LIMPIEZA DE VARIABLES Y PUERTOS
-PORTC = 1;
+PORTC = 255;
 PORTD = 0;
+
 
 
 
 //INICIO DEL LOOP INFINITO
 while(1){
     PORTD = cont;
-    PORTC = madc;
-    ADCON0bits.GO = 1;              //INICIA EL ADC
-        
+    ADCON0bits.GO = 1;         //INICIA EL ADC
+    
 }
 
 }
@@ -120,9 +149,48 @@ void botones (void){
 }
 
 void adc(void){
-   
-    
-   // while (ADCON0bits.GO == 1){};   //ESPERA A LA LECTURA
-    madc = ADRESH;
+  
+    AH = ADRESH;
+   // AL = ADRESL;
     PIR1bits.ADIF = 0;
+}
+
+//Timer0
+//Prescaler 1:4; TMR0 Preload = 6; Actual Interrupt Time : 1 ms
+ 
+//Place/Copy this part in declaration section
+void InitTimer0(){
+  OPTION_REGbits.T0CS = 0;
+  OPTION_REGbits.PSA = 0;
+  OPTION_REGbits.PS = 0;
+  INTCONbits.T0IE = 1;
+  TMR0 = 6;
+  INTCONbits.T0IF	 = 0; // LIMPIAR BANDERA
+  
+}
+ 
+void Interrupt(){
+    AHM = AH >> 4;
+    AHL = AH & 0x0F;
+    if (AL == 0){
+        PORTAbits.RA7 = 1;
+        SEG(AHM);
+        __delay_ms(5);
+        PORTC = 255;
+        __delay_ms(8);
+        PORTAbits.RA7 = 0;
+        AL = 1;
+    }
+    else {
+        PORTAbits.RA6 = 1;
+        SEG(AHL);
+        __delay_ms(5);
+        PORTC = 255;
+       // __delay_ms(15);
+        PORTAbits.RA6 = 0;
+        AL = 0;
+    }
+    INTCONbits.T0IF	 = 0; // LIMPIAR BANDERA
+    TMR0 = 6; // VALOR DEL TMR0
+     
 }

@@ -2642,6 +2642,8 @@ extern __bank0 __bit __timeout;
 void ADC_CONFIG(uint8_t canal, uint8_t justif);
 
 void ADC_INTERRUPT(void);
+
+void ADC_RES(uint8_t AH, uint8_t AL);
 # 9 "ADC.c" 2
 
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c90\\stdint.h" 1 3
@@ -2755,4 +2757,11 @@ void ADC_INTERRUPT(void){
     PIE1bits.ADIE = 1;
     INTCONbits.GIE = 1;
     INTCONbits.PEIE = 1;
+}
+
+void ADC_RES(uint8_t AH, uint8_t AL){
+    AH = ADRESH;
+    AL = ADRESL;
+    PIR1bits.ADIF = 0;
+    return;
 }

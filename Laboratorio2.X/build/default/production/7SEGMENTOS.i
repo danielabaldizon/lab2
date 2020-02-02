@@ -1,4 +1,4 @@
-# 1 "lab2.c"
+# 1 "7SEGMENTOS.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,62 +6,7 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "lab2.c" 2
-
-
-
-
-
-
-#pragma config FOSC = INTRC_NOCLKOUT
-#pragma config WDTE = OFF
-#pragma config PWRTE = OFF
-#pragma config MCLRE = OFF
-#pragma config CP = OFF
-#pragma config CPD = OFF
-#pragma config BOREN = OFF
-#pragma config IESO = OFF
-#pragma config FCMEN = OFF
-#pragma config LVP = OFF
-
-
-#pragma config BOR4V = BOR40V
-#pragma config WRT = OFF
-
-
-
-
-
-
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\xc.h" 1 3
-# 18 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\xc.h" 3
-extern const char __xc8_OPTIM_SPEED;
-
-extern double __fpnormalize(double);
-
-
-
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c90\\xc8debug.h" 1 3
-# 13 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c90\\xc8debug.h" 3
-#pragma intrinsic(__builtin_software_breakpoint)
-extern void __builtin_software_breakpoint(void);
-# 23 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\xc.h" 2 3
-
-
-
-
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\pic.h" 1 3
-
-
-
-
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\htc.h" 1 3
-
-
-
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\xc.h" 1 3
-# 4 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\htc.h" 2 3
-# 5 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\pic.h" 2 3
+# 1 "7SEGMENTOS.c" 2
 
 
 
@@ -69,9 +14,6 @@ extern void __builtin_software_breakpoint(void);
 
 
 
-
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\pic_chip_select.h" 1 3
-# 2703 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\pic_chip_select.h" 3
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\pic16f887.h" 1 3
 # 44 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\pic16f887.h" 3
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\__at.h" 1 3
@@ -2483,226 +2425,10 @@ extern volatile __bit nW __attribute__((address(0x4A2)));
 
 
 extern volatile __bit nWRITE __attribute__((address(0x4A2)));
-# 2703 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\pic_chip_select.h" 2 3
-# 13 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\pic.h" 2 3
-# 30 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\pic.h" 3
-#pragma intrinsic(__nop)
-extern void __nop(void);
-# 78 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\pic.h" 3
-__attribute__((__unsupported__("The " "FLASH_READ" " macro function is no longer supported. Please use the MPLAB X MCC."))) unsigned char __flash_read(unsigned short addr);
+# 8 "7SEGMENTOS.c" 2
 
-__attribute__((__unsupported__("The " "FLASH_WRITE" " macro function is no longer supported. Please use the MPLAB X MCC."))) void __flash_write(unsigned short addr, unsigned short data);
-
-__attribute__((__unsupported__("The " "FLASH_ERASE" " macro function is no longer supported. Please use the MPLAB X MCC."))) void __flash_erase(unsigned short addr);
-
-
-
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\eeprom_routines.h" 1 3
-# 114 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\eeprom_routines.h" 3
-extern void eeprom_write(unsigned char addr, unsigned char value);
-extern unsigned char eeprom_read(unsigned char addr);
-# 85 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\pic.h" 2 3
-
-
-
-
-
-
-#pragma intrinsic(_delay)
-extern __attribute__((nonreentrant)) void _delay(unsigned long);
-#pragma intrinsic(_delaywdt)
-extern __attribute__((nonreentrant)) void _delaywdt(unsigned long);
-# 137 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\pic.h" 3
-extern __bank0 unsigned char __resetbits;
-extern __bank0 __bit __powerdown;
-extern __bank0 __bit __timeout;
-# 27 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\xc.h" 2 3
-# 26 "lab2.c" 2
-
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c90\\stdio.h" 1 3
-
-
-
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\__size_t.h" 1 3
-
-
-
-typedef unsigned size_t;
-# 4 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c90\\stdio.h" 2 3
-
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\__null.h" 1 3
-# 5 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c90\\stdio.h" 2 3
-
-
-
-
-
-
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c90\\stdarg.h" 1 3
-
-
-
-
-
-
-typedef void * va_list[1];
-
-#pragma intrinsic(__va_start)
-extern void * __va_start(void);
-
-#pragma intrinsic(__va_arg)
-extern void * __va_arg(void *, ...);
-# 11 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c90\\stdio.h" 2 3
-# 43 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c90\\stdio.h" 3
-struct __prbuf
-{
- char * ptr;
- void (* func)(char);
-};
-# 85 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c90\\stdio.h" 3
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c90\\conio.h" 1 3
-
-
-
-
-
-
-
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c90\\errno.h" 1 3
-# 29 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c90\\errno.h" 3
-extern int errno;
-# 8 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c90\\conio.h" 2 3
-
-
-
-
-extern void init_uart(void);
-
-extern char getch(void);
-extern char getche(void);
-extern void putch(char);
-extern void ungetch(char);
-
-extern __bit kbhit(void);
-
-
-
-extern char * cgets(char *);
-extern void cputs(const char *);
-# 85 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c90\\stdio.h" 2 3
-
-
-
-extern int cprintf(char *, ...);
-#pragma printf_check(cprintf)
-
-
-
-extern int _doprnt(struct __prbuf *, const register char *, register va_list);
-# 180 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c90\\stdio.h" 3
-#pragma printf_check(vprintf) const
-#pragma printf_check(vsprintf) const
-
-extern char * gets(char *);
-extern int puts(const char *);
-extern int scanf(const char *, ...) __attribute__((unsupported("scanf() is not supported by this compiler")));
-extern int sscanf(const char *, const char *, ...) __attribute__((unsupported("sscanf() is not supported by this compiler")));
-extern int vprintf(const char *, va_list) __attribute__((unsupported("vprintf() is not supported by this compiler")));
-extern int vsprintf(char *, const char *, va_list) __attribute__((unsupported("vsprintf() is not supported by this compiler")));
-extern int vscanf(const char *, va_list ap) __attribute__((unsupported("vscanf() is not supported by this compiler")));
-extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupported("vsscanf() is not supported by this compiler")));
-
-#pragma printf_check(printf) const
-#pragma printf_check(sprintf) const
-extern int sprintf(char *, const char *, ...);
-extern int printf(const char *, ...);
-# 27 "lab2.c" 2
-
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c90\\stdlib.h" 1 3
-
-
-
-
-
-
-typedef unsigned short wchar_t;
-
-
-
-
-
-
-
-typedef struct {
- int rem;
- int quot;
-} div_t;
-typedef struct {
- unsigned rem;
- unsigned quot;
-} udiv_t;
-typedef struct {
- long quot;
- long rem;
-} ldiv_t;
-typedef struct {
- unsigned long quot;
- unsigned long rem;
-} uldiv_t;
-# 65 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c90\\stdlib.h" 3
-extern double atof(const char *);
-extern double strtod(const char *, const char **);
-extern int atoi(const char *);
-extern unsigned xtoi(const char *);
-extern long atol(const char *);
-
-
-
-extern long strtol(const char *, char **, int);
-
-extern int rand(void);
-extern void srand(unsigned int);
-extern void * calloc(size_t, size_t);
-extern div_t div(int numer, int denom);
-extern udiv_t udiv(unsigned numer, unsigned denom);
-extern ldiv_t ldiv(long numer, long denom);
-extern uldiv_t uldiv(unsigned long numer,unsigned long denom);
-
-
-
-extern unsigned long _lrotl(unsigned long value, unsigned int shift);
-extern unsigned long _lrotr(unsigned long value, unsigned int shift);
-extern unsigned int _rotl(unsigned int value, unsigned int shift);
-extern unsigned int _rotr(unsigned int value, unsigned int shift);
-
-
-
-
-extern void * malloc(size_t);
-extern void free(void *);
-extern void * realloc(void *, size_t);
-# 104 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c90\\stdlib.h" 3
-extern int atexit(void (*)(void));
-extern char * getenv(const char *);
-extern char ** environ;
-extern int system(char *);
-extern void qsort(void *, size_t, size_t, int (*)(const void *, const void *));
-extern void * bsearch(const void *, void *, size_t, size_t, int(*)(const void *, const void *));
-extern int abs(int);
-extern long labs(long);
-
-extern char * itoa(char * buf, int val, int base);
-extern char * utoa(char * buf, unsigned val, int base);
-
-
-
-
-extern char * ltoa(char * buf, long val, int base);
-extern char * ultoa(char * buf, unsigned long val, int base);
-
-extern char * ftoa(float f, int * status);
-# 28 "lab2.c" 2
-
+# 1 "./7SEGMENTOS.h" 1
+# 10 "./7SEGMENTOS.h"
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c90\\stdint.h" 1 3
 # 13 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c90\\stdint.h" 3
 typedef signed char int8_t;
@@ -2836,181 +2562,246 @@ typedef int16_t intptr_t;
 
 
 typedef uint16_t uintptr_t;
-# 29 "lab2.c" 2
-
-
-# 1 "./ADC.h" 1
-# 10 "./ADC.h"
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c90\\stdint.h" 1 3
-# 10 "./ADC.h" 2
-
-
-
-
-void ADC_CONFIG(uint8_t canal, uint8_t justif);
-
-void ADC_INTERRUPT(void);
-
-void ADC_RES(uint8_t AH, uint8_t AL);
-# 31 "lab2.c" 2
-
-# 1 "./7SEGMENTOS.h" 1
-# 10 "./7SEGMENTOS.h"
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c90\\stdint.h" 1 3
 # 10 "./7SEGMENTOS.h" 2
 
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\xc.h" 1 3
+# 18 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\xc.h" 3
+extern const char __xc8_OPTIM_SPEED;
+
+extern double __fpnormalize(double);
+
+
+
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c90\\xc8debug.h" 1 3
+# 13 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c90\\xc8debug.h" 3
+#pragma intrinsic(__builtin_software_breakpoint)
+extern void __builtin_software_breakpoint(void);
+# 23 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\xc.h" 2 3
+
+
+
+
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\pic.h" 1 3
+
+
+
+
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\htc.h" 1 3
+
+
+
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\xc.h" 1 3
+# 4 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\htc.h" 2 3
+# 5 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\pic.h" 2 3
+
+
+
+
+
+
+
+
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\pic_chip_select.h" 1 3
+# 13 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\pic.h" 2 3
+# 30 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\pic.h" 3
+#pragma intrinsic(__nop)
+extern void __nop(void);
+# 78 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\pic.h" 3
+__attribute__((__unsupported__("The " "FLASH_READ" " macro function is no longer supported. Please use the MPLAB X MCC."))) unsigned char __flash_read(unsigned short addr);
+
+__attribute__((__unsupported__("The " "FLASH_WRITE" " macro function is no longer supported. Please use the MPLAB X MCC."))) void __flash_write(unsigned short addr, unsigned short data);
+
+__attribute__((__unsupported__("The " "FLASH_ERASE" " macro function is no longer supported. Please use the MPLAB X MCC."))) void __flash_erase(unsigned short addr);
+
+
+
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\eeprom_routines.h" 1 3
+# 114 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\eeprom_routines.h" 3
+extern void eeprom_write(unsigned char addr, unsigned char value);
+extern unsigned char eeprom_read(unsigned char addr);
+# 85 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\pic.h" 2 3
+
+
+
+
+
+
+#pragma intrinsic(_delay)
+extern __attribute__((nonreentrant)) void _delay(unsigned long);
+#pragma intrinsic(_delaywdt)
+extern __attribute__((nonreentrant)) void _delaywdt(unsigned long);
+# 137 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\pic.h" 3
+extern __bank0 unsigned char __resetbits;
+extern __bank0 __bit __powerdown;
+extern __bank0 __bit __timeout;
+# 27 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\xc.h" 2 3
+# 11 "./7SEGMENTOS.h" 2
 
 
 void SEG(uint8_t val);
-# 32 "lab2.c" 2
-# 47 "lab2.c"
-uint8_t cont = 0;
-uint8_t AR1 = 0;
-uint8_t AR2 = 0;
-uint8_t madc;
-uint8_t AL = 0;
-uint8_t AH;
-uint8_t AHM;
-uint8_t AHL;
-
-
-void botones(void);
-void adc(void);
-void InitTimer0();
-void Interrupt();
-
-void __attribute__((picinterrupt(("")))) ISR(void){
-    if (INTCONbits.RBIF == 1){
-        botones();
+# 9 "7SEGMENTOS.c" 2
+# 19 "7SEGMENTOS.c"
+void SEG(uint8_t val){
+    switch(val){
+        case 0:
+            PORTCbits.RC0 = 0;
+            PORTCbits.RC1 = 0;
+            PORTCbits.RC2 = 0;
+            PORTCbits.RC3 = 0;
+            PORTCbits.RC4 = 0;
+            PORTCbits.RC5 = 0;
+            PORTCbits.RC6 = 1;
+            PORTCbits.RC7 = 1;
+            break;
+        case 1:
+            PORTCbits.RC0 = 1;
+            PORTCbits.RC1 = 0;
+            PORTCbits.RC2 = 0;
+            PORTCbits.RC3 = 1;
+            PORTCbits.RC4 = 1;
+            PORTCbits.RC5 = 1;
+            PORTCbits.RC6 = 1;
+            PORTCbits.RC7 = 1;
+            break;
+        case 2:
+            PORTCbits.RC0 = 0;
+            PORTCbits.RC1 = 0;
+            PORTCbits.RC2 = 1;
+            PORTCbits.RC3 = 0;
+            PORTCbits.RC4 = 0;
+            PORTCbits.RC5 = 1;
+            PORTCbits.RC6 = 0;
+            PORTCbits.RC7 = 1;
+            break;
+        case 3:
+            PORTCbits.RC0 = 0;
+            PORTCbits.RC1 = 0;
+            PORTCbits.RC2 = 0;
+            PORTCbits.RC3 = 0;
+            PORTCbits.RC4 = 1;
+            PORTCbits.RC5 = 1;
+            PORTCbits.RC6 = 0;
+            PORTCbits.RC7 = 1;
+            break;
+        case 4:
+            PORTCbits.RC0 = 1;
+            PORTCbits.RC1 = 0;
+            PORTCbits.RC2 = 0;
+            PORTCbits.RC3 = 1;
+            PORTCbits.RC4 = 1;
+            PORTCbits.RC5 = 0;
+            PORTCbits.RC6 = 0;
+            PORTCbits.RC7 = 1;
+            break;
+        case 5:
+            PORTCbits.RC0 = 0;
+            PORTCbits.RC1 = 1;
+            PORTCbits.RC2 = 0;
+            PORTCbits.RC3 = 0;
+            PORTCbits.RC4 = 1;
+            PORTCbits.RC5 = 0;
+            PORTCbits.RC6 = 0;
+            PORTCbits.RC7 = 1;
+            break;
+        case 6:
+            PORTCbits.RC0 = 0;
+            PORTCbits.RC1 = 1;
+            PORTCbits.RC2 = 0;
+            PORTCbits.RC3 = 0;
+            PORTCbits.RC4 = 0;
+            PORTCbits.RC5 = 0;
+            PORTCbits.RC6 = 0;
+            PORTCbits.RC7 = 1;
+            break;
+        case 7:
+            PORTCbits.RC0 = 0;
+            PORTCbits.RC1 = 0;
+            PORTCbits.RC2 = 0;
+            PORTCbits.RC3 = 1;
+            PORTCbits.RC4 = 1;
+            PORTCbits.RC5 = 1;
+            PORTCbits.RC6 = 1;
+            PORTCbits.RC7 = 1;
+            break;
+        case 8:
+            PORTCbits.RC0 = 0;
+            PORTCbits.RC1 = 0;
+            PORTCbits.RC2 = 0;
+            PORTCbits.RC3 = 0;
+            PORTCbits.RC4 = 0;
+            PORTCbits.RC5 = 0;
+            PORTCbits.RC6 = 0;
+            PORTCbits.RC7 = 1;
+            break;
+        case 9:
+            PORTCbits.RC0 = 0;
+            PORTCbits.RC1 = 0;
+            PORTCbits.RC2 = 0;
+            PORTCbits.RC3 = 0;
+            PORTCbits.RC4 = 1;
+            PORTCbits.RC5 = 0;
+            PORTCbits.RC6 = 0;
+            PORTCbits.RC7 = 1;
+            break;
+        case 10:
+            PORTCbits.RC0 = 0;
+            PORTCbits.RC1 = 0;
+            PORTCbits.RC2 = 0;
+            PORTCbits.RC3 = 1;
+            PORTCbits.RC4 = 0;
+            PORTCbits.RC5 = 0;
+            PORTCbits.RC6 = 0;
+            PORTCbits.RC7 = 1;
+            break;
+        case 11:
+            PORTCbits.RC0 = 0;
+            PORTCbits.RC1 = 0;
+            PORTCbits.RC2 = 0;
+            PORTCbits.RC3 = 0;
+            PORTCbits.RC4 = 0;
+            PORTCbits.RC5 = 0;
+            PORTCbits.RC6 = 0;
+            PORTCbits.RC7 = 0;
+            break;
+        case 12:
+            PORTCbits.RC0 = 0;
+            PORTCbits.RC1 = 1;
+            PORTCbits.RC2 = 1;
+            PORTCbits.RC3 = 0;
+            PORTCbits.RC4 = 0;
+            PORTCbits.RC5 = 0;
+            PORTCbits.RC6 = 1;
+            PORTCbits.RC7 = 1;
+            break;
+        case 13:
+            PORTCbits.RC0 = 0;
+            PORTCbits.RC1 = 0;
+            PORTCbits.RC2 = 0;
+            PORTCbits.RC3 = 0;
+            PORTCbits.RC4 = 0;
+            PORTCbits.RC5 = 0;
+            PORTCbits.RC6 = 1;
+            PORTCbits.RC7 = 0;
+            break;
+        case 14:
+            PORTCbits.RC0 = 0;
+            PORTCbits.RC1 = 1;
+            PORTCbits.RC2 = 1;
+            PORTCbits.RC3 = 0;
+            PORTCbits.RC4 = 0;
+            PORTCbits.RC5 = 0;
+            PORTCbits.RC6 = 0;
+            PORTCbits.RC7 = 1;
+            break;
+        case 15:
+            PORTCbits.RC0 = 0;
+            PORTCbits.RC1 = 1;
+            PORTCbits.RC2 = 1;
+            PORTCbits.RC3 = 1;
+            PORTCbits.RC4 = 0;
+            PORTCbits.RC5 = 0;
+            PORTCbits.RC6 = 0;
+            PORTCbits.RC7 = 1;
+            break;
     }
-    if (PIR1bits.ADIF == 1){
-        adc();
-    }
-    if (INTCONbits.T0IF == 1){
-    Interrupt();
-  }
-
-}
-
-void main(void) {
-
-ANSELH = 0;
-ANSEL = 0;
-TRISD = 0;
-TRISC = 0;
-TRISAbits.TRISA6 = 0;
-TRISAbits.TRISA7 = 0;
-TRISAbits.TRISA5 = 0;
-TRISBbits.TRISB7 = 1;
-TRISBbits.TRISB6 = 1;
-OPTION_REG = 0b11100111;
-OSCCONbits.IRCF = 7;
-OSCCONbits.SCS = 1;
-
-
-ADC_CONFIG(0, 0);
-ADC_INTERRUPT();
-
-
-InitTimer0();
-
-
-
-IOCBbits.IOCB7 = 1;
-IOCBbits.IOCB6 = 1;
-INTCONbits.GIE = 1;
-INTCONbits.RBIE = 1;
-WPUBbits.WPUB7 = 1;
-WPUBbits.WPUB6 = 1;
-OPTION_REGbits.nRBPU = 0;
-INTCONbits.RBIF = 0;
-
-
-
-PORTC = 255;
-PORTD = 0;
-
-
-
-
-
-while(1){
-    PORTD = AHM;
-    ADCON0bits.GO = 1;
-
-}
-
-}
-
-
-void botones (void){
-
-    if (PORTBbits.RB7 == 0){
-        AR1 = 1;
-    }
-         else{
-             if (AR1 == 1){
-                 cont++;
-                 AR1 = 0;
-                 _delay((unsigned long)((25)*(4000000/4000.0)));
-             }
-         }
-    if (PORTBbits.RB6 == 0){
-        AR2 = 1;
-    }
-         else{
-             if (AR2 == 1){
-                 cont = cont - 1;
-                 AR2 = 0;
-                 _delay((unsigned long)((25)*(4000000/4000.0)));
-             }
-    }
-    INTCONbits.RBIF = 0;
-}
-
-void adc(void){
-
-    AH = ADRESH;
-
-    PIR1bits.ADIF = 0;
-}
-
-
-
-
-
-void InitTimer0(){
-  OPTION_REGbits.T0CS = 0;
-  OPTION_REGbits.PSA = 0;
-  OPTION_REGbits.PS = 0;
-  INTCONbits.T0IE = 1;
-  TMR0 = 6;
-  INTCONbits.T0IF = 0;
-
-}
-
-void Interrupt(){
-    AHM = AH >> 4;
-    AHL = AH & 0x0F;
-    if (AL == 0){
-        PORTAbits.RA7 = 1;
-        SEG(AHM);
-        _delay((unsigned long)((5)*(4000000/4000.0)));
-        PORTC = 255;
-        _delay((unsigned long)((8)*(4000000/4000.0)));
-        PORTAbits.RA7 = 0;
-        AL = 1;
-    }
-    else {
-        PORTAbits.RA6 = 1;
-        SEG(AHL);
-        _delay((unsigned long)((5)*(4000000/4000.0)));
-        PORTC = 255;
-
-        PORTAbits.RA6 = 0;
-        AL = 0;
-    }
-    INTCONbits.T0IF = 0;
-    TMR0 = 6;
-
 }

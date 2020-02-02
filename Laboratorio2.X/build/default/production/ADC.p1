@@ -125,6 +125,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 "482
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f887.h: 482: extern volatile INTCONbits_t INTCONbits __attribute__((address(0x00B)));
 [v _INTCONbits `VS15 ~T0 @X0 0 e@11 ]
+"1238
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f887.h: 1238: extern volatile unsigned char ADRESH __attribute__((address(0x01E)));
+[v _ADRESH `Vuc ~T0 @X0 0 e@30 ]
+"2970
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f887.h: 2970: extern volatile unsigned char ADRESL __attribute__((address(0x09E)));
+[v _ADRESL `Vuc ~T0 @X0 0 e@158 ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f887.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f887.h: 54: __asm("INDF equ 00h");
 [; <" INDF equ 00h ;# ">
@@ -673,4 +679,28 @@ Version 4.0 HI-TECH Software Intermediate Code
 "119
 [; ;ADC.c: 119: }
 [e :UE 159 ]
+}
+"121
+[; ;ADC.c: 121: void ADC_RES(uint8_t AH, uint8_t AL){
+[v _ADC_RES `(v ~T0 @X0 1 ef2`uc`uc ]
+{
+[e :U _ADC_RES ]
+[v _AH `uc ~T0 @X0 1 r1 ]
+[v _AL `uc ~T0 @X0 1 r2 ]
+[f ]
+"122
+[; ;ADC.c: 122:     AH = ADRESH;
+[e = _AH _ADRESH ]
+"123
+[; ;ADC.c: 123:     AL = ADRESL;
+[e = _AL _ADRESL ]
+"124
+[; ;ADC.c: 124:     PIR1bits.ADIF = 0;
+[e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
+"125
+[; ;ADC.c: 125:     return;
+[e $UE 160  ]
+"126
+[; ;ADC.c: 126: }
+[e :UE 160 ]
 }

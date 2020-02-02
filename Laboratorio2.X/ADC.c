@@ -117,3 +117,10 @@ void ADC_INTERRUPT(void){
     INTCONbits.GIE = 1; //PERIFERICOS
     INTCONbits.PEIE = 1;
 }
+
+void ADC_RES(uint8_t AH, uint8_t AL){
+    AH = ADRESH;
+    AL = ADRESL;
+    PIR1bits.ADIF = 0;
+    return;
+}
