@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files (x86)\Microchip\xc8\v2.10\pic\dat\en_msgs.txt \
   -cs -h+dist/default/production\Laboratorio2.X.production.sym \
   --cmf=dist/default/production\Laboratorio2.X.production.cmf -z -Q16F887 \
-  -oC:\Users\DANIEL~1\AppData\Local\Temp\sc5g.2 --defsym=__MPLAB_BUILD=1 \
+  -oC:\Users\DANIEL~1\AppData\Local\Temp\s4ss.3 --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/Laboratorio2.X.production.map -E1 -ver=XC8 \
   --acfsm=1493 -ASTACK=0110h-016Fh -pstack=STACK -ACODE=00h-07FFhx4 \
   -ASTRCODE=00h-01FFFh -ASTRING=00h-0FFhx32 -ACONST=00h-0FFhx32 \
@@ -18,7 +18,7 @@ Linker command line:
   -pfunctab=ENTRY -ACONFIG=02007h-02008h -pconfig=CONFIG -DCONFIG=2 \
   -AIDLOC=02000h-02003h -pidloc=IDLOC -DIDLOC=2 -AEEDATA=00h-0FFh/02100h \
   -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 \
-  -DENTRY=2 -k C:\Users\DANIEL~1\AppData\Local\Temp\sc5g.o \
+  -DENTRY=2 -k C:\Users\DANIEL~1\AppData\Local\Temp\s4ss.o \
   dist/default/production\Laboratorio2.X.production.o 
 
 Object code version is 3.11
@@ -28,7 +28,7 @@ Machine type is 16F887
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\DANIEL~1\AppData\Local\Temp\sc5g.o
+C:\Users\DANIEL~1\AppData\Local\Temp\s4ss.o
                 end_init                              E        E        3        8       0
                 reset_vec                             0        0        3        0       0
                 config                             2007     2007        2     400E       0
@@ -37,13 +37,13 @@ dist/default/production\Laboratorio2.X.production.o
                 intentry                              4        4        A        8       0
                 text8                               131      131       ED        8       0
                 text7                               21E      21E       53        8       0
-                text6                               323      323        8        8       0
-                text5                               2AC      2AC       3B        8       0
-                text4                               2E7      2E7       26        8       0
+                text6                               32D      32D        8        8       0
+                text5                               2B6      2B6       3B        8       0
+                text4                               2F1      2F1       26        8       0
                 text3                                1F       1F      112        8       0
-                text2                               31A      31A        9        8       0
-                text1                               30D      30D        D        8       0
-                maintext                            271      271       3B        8       0
+                text2                               324      324        9        8       0
+                text1                               317      317        D        8       0
+                maintext                            271      271       45        8       0
                 cstackBANK0                          20       20        4       20       1
                 cstackCOMMON                         70       70        8       70       1
                 bssBANK0                             24       24        2       20       1
@@ -59,13 +59,13 @@ TOTAL           Name                               Link     Load   Length     Sp
                 reset_vec                             0        0        3         0
                 text8                               131      131       ED         0
                 text7                               21E      21E       53         0
-                text6                               323      323        8         0
-                text5                               2AC      2AC       3B         0
-                text4                               2E7      2E7       26         0
+                text6                               32D      32D        8         0
+                text5                               2B6      2B6       3B         0
+                text4                               2F1      2F1       26         0
                 text3                                1F       1F      112         0
-                text2                               31A      31A        9         0
-                text1                               30D      30D        D         0
-                maintext                            271      271       3B         0
+                text2                               324      324        9         0
+                text1                               317      317        D         0
+                maintext                            271      271       45         0
 
         CLASS   STRCODE        
 
@@ -114,7 +114,7 @@ TOTAL           Name                               Link     Load   Length     Sp
 SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class     Delta
 
                 reset_vec                      000000  000003  000003         0       0  CODE        2
-                intentry                       000004  000327  00032B         8       0  CODE        2
+                intentry                       000004  000331  000335         8       0  CODE        2
                 cstackBANK0                    000020  000006  000026        20       1  BANK0       1
                 cstackCOMMON                   000070  00000E  00007E        70       1  COMMON      1
                 config                         002007  000002  002009      400E       0  CONFIG      2
@@ -128,12 +128,12 @@ UNUSED ADDRESS RANGES
         BANK2            0110-016F             60           1
         BANK3            0190-01EF             60           1
         CODE             0003-0003              1           2
-                         032B-1FFF            800
+                         0335-1FFF            800
         CONST            0003-0003              1           2
-                         032B-1FFF            100
+                         0335-1FFF            100
         EEDATA           2100-21FF            100           2
         ENTRY            0003-0003              1           2
-                         032B-1FFF            100
+                         0335-1FFF            100
         IDLOC            2000-2003              4           2
         RAM              0026-006F             4A           1
                          00A0-00EF             50
@@ -145,9 +145,9 @@ UNUSED ADDRESS RANGES
         SFR3             0180-018F             10           1
         STACK            0110-016F             60           1
         STRCODE          0003-0003              1           2
-                         032B-1FFF           1CD5
+                         0335-1FFF           1CCB
         STRING           0003-0003              1           2
-                         032B-1FFF            100
+                         0335-1FFF            100
 
                                   Symbol Table
 
@@ -157,23 +157,23 @@ SEG@val                   cstackCOMMON 0072
 _ADCON0bits               (abs)        001F
 _ADCON1bits               (abs)        009F
 _ADC_CONFIG               text3        001F
-_ADC_INTERRUPT            text2        031A
+_ADC_INTERRUPT            text2        0324
 _ADRESH                   (abs)        001E
 _ADRESL                   (abs)        009E
-_AH                       bssCOMMON    0079
+_AH                       bssBANK0     0024
 _AHL                      bssCOMMON    0078
-_AHM                      bssBANK0     0024
+_AHM                      bssCOMMON    0079
 _AL                       bssCOMMON    007A
 _ANSEL                    (abs)        0188
 _ANSELH                   (abs)        0189
 _ANSELHbits               (abs)        0189
 _ANSELbits                (abs)        0188
-_AR1                      bssCOMMON    007C
-_AR2                      bssCOMMON    007B
+_AR1                      bssCOMMON    007D
+_AR2                      bssCOMMON    007C
 _INTCONbits               (abs)        000B
 _IOCBbits                 (abs)        0096
-_ISR                      text4        02E7
-_InitTimer0               text1        030D
+_ISR                      text4        02F1
+_InitTimer0               text1        0317
 _Interrupt                text7        021E
 _OPTION_REG               (abs)        0081
 _OPTION_REGbits           (abs)        0081
@@ -285,15 +285,15 @@ ___sp                     stack        0000
 ___stackhi                (abs)        0000
 ___stacklo                (abs)        0000
 __end_of_ADC_CONFIG       text3        0131
-__end_of_ADC_INTERRUPT    text2        0323
-__end_of_ISR              text4        030D
-__end_of_InitTimer0       text1        031A
+__end_of_ADC_INTERRUPT    text2        032D
+__end_of_ISR              text4        0317
+__end_of_InitTimer0       text1        0324
 __end_of_Interrupt        text7        0271
 __end_of_SEG              text8        021E
 __end_of__initialization  cinit        001B
-__end_of_adc              text6        032B
-__end_of_botones          text5        02E7
-__end_of_main             maintext     02AC
+__end_of_adc              text6        0335
+__end_of_botones          text5        02F1
+__end_of_main             maintext     02B6
 __initialization          cinit        0011
 __pbssBANK0               bssBANK0     0024
 __pbssCOMMON              bssCOMMON    0078
@@ -301,12 +301,12 @@ __pcstackBANK0            cstackBANK0  0020
 __pcstackCOMMON           cstackCOMMON 0070
 __pintentry               intentry     0004
 __pmaintext               maintext     0271
-__ptext1                  text1        030D
-__ptext2                  text2        031A
+__ptext1                  text1        0317
+__ptext2                  text2        0324
 __ptext3                  text3        001F
-__ptext4                  text4        02E7
-__ptext5                  text5        02AC
-__ptext6                  text6        0323
+__ptext4                  text4        02F1
+__ptext5                  text5        02B6
+__ptext6                  text6        032D
 __ptext7                  text7        021E
 __ptext8                  text8        0131
 __size_of_ADC_CONFIG      (abs)        0000
@@ -318,9 +318,9 @@ __size_of_SEG             (abs)        0000
 __size_of_adc             (abs)        0000
 __size_of_botones         (abs)        0000
 __size_of_main            (abs)        0000
-_adc                      text6        0323
-_botones                  text5        02AC
-_cont                     bssCOMMON    007D
+_adc                      text6        032D
+_botones                  text5        02B6
+_cont                     bssBANK0     0025
 _main                     maintext     0271
 btemp                     (abs)        007E
 end_of_initialization     cinit        001B
@@ -373,7 +373,7 @@ Total ram usage:        0 bytes
 
  *************** function _InitTimer0 *****************
  Defined at:
-		line 162 in file "lab2.c"
+		line 168 in file "lab2.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -496,7 +496,7 @@ Total ram usage:        3 bytes
 
  *************** function _botones *****************
  Defined at:
-		line 126 in file "lab2.c"
+		line 132 in file "lab2.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -525,7 +525,7 @@ Total ram usage:        2 bytes
 
  *************** function _adc *****************
  Defined at:
-		line 151 in file "lab2.c"
+		line 157 in file "lab2.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -554,7 +554,7 @@ Total ram usage:        1 bytes
 
  *************** function _Interrupt *****************
  Defined at:
-		line 172 in file "lab2.c"
+		line 178 in file "lab2.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -616,14 +616,14 @@ MODULE INFORMATION
 
 Module		Function		Class		Link	Load	Size
 lab2.c
-		_ISR           		CODE           	02E7	0000	39
+		_ISR           		CODE           	02F1	0000	39
 		_Interrupt     		CODE           	021E	0000	84
-		_InitTimer0    		CODE           	030D	0000	14
-		_main          		CODE           	0271	0000	60
-		_adc           		CODE           	0323	0000	9
-		_botones       		CODE           	02AC	0000	60
+		_InitTimer0    		CODE           	0317	0000	14
+		_main          		CODE           	0271	0000	70
+		_adc           		CODE           	032D	0000	9
+		_botones       		CODE           	02B6	0000	60
 
-lab2.c estimated size: 266
+lab2.c estimated size: 276
 
 7SEGMENTOS.c
 		_SEG           		CODE           	0131	0000	238
@@ -636,7 +636,7 @@ shared
 shared estimated size: 11
 
 ADC.c
-		_ADC_INTERRUPT 		CODE           	031A	0000	10
+		_ADC_INTERRUPT 		CODE           	0324	0000	10
 		_ADC_CONFIG    		CODE           	001F	0000	275
 
 ADC.c estimated size: 285

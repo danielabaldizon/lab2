@@ -149,6 +149,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 "352
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f887.h: 352: extern volatile unsigned char PORTD __attribute__((address(0x008)));
 [v _PORTD `Vuc ~T0 @X0 0 e@8 ]
+"172
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f887.h: 172:     struct {
+[s S6 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S6 . RA0 RA1 RA2 RA3 RA4 RA5 RA6 RA7 ]
+"171
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f887.h: 171: typedef union {
+[u S5 `S6 1 ]
+[n S5 . . ]
+"183
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f887.h: 183: extern volatile PORTAbits_t PORTAbits __attribute__((address(0x005)));
+[v _PORTAbits `VS5 ~T0 @X0 0 e@5 ]
 "1251
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f887.h: 1251:     struct {
 [s S45 :1 `uc 1 :1 `uc 1 :4 `uc 1 :2 `uc 1 ]
@@ -193,17 +204,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "59
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f887.h: 59: extern volatile unsigned char TMR0 __attribute__((address(0x001)));
 [v _TMR0 `Vuc ~T0 @X0 0 e@1 ]
-"172
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f887.h: 172:     struct {
-[s S6 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S6 . RA0 RA1 RA2 RA3 RA4 RA5 RA6 RA7 ]
-"171
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f887.h: 171: typedef union {
-[u S5 `S6 1 ]
-[n S5 . . ]
-"183
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f887.h: 183: extern volatile PORTAbits_t PORTAbits __attribute__((address(0x005)));
-[v _PORTAbits `VS5 ~T0 @X0 0 e@5 ]
 "13 ./7SEGMENTOS.h
 [; ;./7SEGMENTOS.h: 13: void SEG(uint8_t val);
 [v _SEG `(v ~T0 @X0 0 ef1`uc ]
@@ -627,229 +627,254 @@ Version 4.0 HI-TECH Software Intermediate Code
 "111
 [; ;lab2.c: 111: PORTD = 0;
 [e = _PORTD -> -> 0 `i `uc ]
-"117
-[; ;lab2.c: 117: while(1){
+"112
+[; ;lab2.c: 112: PORTAbits.RA5 = 0;
+[e = . . _PORTAbits 0 5 -> -> 0 `i `uc ]
+"118
+[; ;lab2.c: 118: while(1){
 [e :U 149 ]
 {
-"118
-[; ;lab2.c: 118:     PORTD = AHM;
-[e = _PORTD _AHM ]
 "119
-[; ;lab2.c: 119:     ADCON0bits.GO = 1;
+[; ;lab2.c: 119:     PORTD = cont;
+[e = _PORTD _cont ]
+"120
+[; ;lab2.c: 120:     ADCON0bits.GO = 1;
 [e = . . _ADCON0bits 1 1 -> -> 1 `i `uc ]
 "121
-[; ;lab2.c: 121: }
+[; ;lab2.c: 121:     if (AH > cont){
+[e $ ! > -> _AH `i -> _cont `i 151  ]
+{
+"122
+[; ;lab2.c: 122:         PORTAbits.RA5 = 1;
+[e = . . _PORTAbits 0 5 -> -> 1 `i `uc ]
+"123
+[; ;lab2.c: 123:     }
+}
+[e $U 152  ]
+"124
+[; ;lab2.c: 124:     else{
+[e :U 151 ]
+{
+"125
+[; ;lab2.c: 125:         PORTAbits.RA5 = 0;
+[e = . . _PORTAbits 0 5 -> -> 0 `i `uc ]
+"126
+[; ;lab2.c: 126:     }
+}
+[e :U 152 ]
+"127
+[; ;lab2.c: 127: }
 }
 [e :U 148 ]
 [e $U 149  ]
 [e :U 150 ]
-"123
-[; ;lab2.c: 123: }
+"129
+[; ;lab2.c: 129: }
 [e :UE 147 ]
 }
-"126
-[; ;lab2.c: 126: void botones (void){
+"132
+[; ;lab2.c: 132: void botones (void){
 [v _botones `(v ~T0 @X0 1 ef ]
 {
 [e :U _botones ]
 [f ]
-"128
-[; ;lab2.c: 128:     if (PORTBbits.RB7 == 0){
-[e $ ! == -> . . _PORTBbits 0 7 `i -> 0 `i 152  ]
-{
-"129
-[; ;lab2.c: 129:         AR1 = 1;
-[e = _AR1 -> -> 1 `i `uc ]
-"130
-[; ;lab2.c: 130:     }
-}
-[e $U 153  ]
-"131
-[; ;lab2.c: 131:          else{
-[e :U 152 ]
-{
-"132
-[; ;lab2.c: 132:              if (AR1 == 1){
-[e $ ! == -> _AR1 `i -> 1 `i 154  ]
-{
-"133
-[; ;lab2.c: 133:                  cont++;
-[e ++ _cont -> -> 1 `i `uc ]
 "134
-[; ;lab2.c: 134:                  AR1 = 0;
-[e = _AR1 -> -> 0 `i `uc ]
+[; ;lab2.c: 134:     if (PORTBbits.RB7 == 0){
+[e $ ! == -> . . _PORTBbits 0 7 `i -> 0 `i 154  ]
+{
 "135
-[; ;lab2.c: 135:                  _delay((unsigned long)((25)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 25 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;lab2.c: 135:         AR1 = 1;
+[e = _AR1 -> -> 1 `i `uc ]
 "136
-[; ;lab2.c: 136:              }
+[; ;lab2.c: 136:     }
 }
-[e :U 154 ]
+[e $U 155  ]
 "137
-[; ;lab2.c: 137:          }
-}
-[e :U 153 ]
+[; ;lab2.c: 137:          else{
+[e :U 154 ]
+{
 "138
-[; ;lab2.c: 138:     if (PORTBbits.RB6 == 0){
-[e $ ! == -> . . _PORTBbits 0 6 `i -> 0 `i 155  ]
+[; ;lab2.c: 138:              if (AR1 == 1){
+[e $ ! == -> _AR1 `i -> 1 `i 156  ]
 {
 "139
-[; ;lab2.c: 139:         AR2 = 1;
-[e = _AR2 -> -> 1 `i `uc ]
+[; ;lab2.c: 139:                  cont++;
+[e ++ _cont -> -> 1 `i `uc ]
 "140
-[; ;lab2.c: 140:     }
-}
-[e $U 156  ]
+[; ;lab2.c: 140:                  AR1 = 0;
+[e = _AR1 -> -> 0 `i `uc ]
 "141
-[; ;lab2.c: 141:          else{
-[e :U 155 ]
-{
-"142
-[; ;lab2.c: 142:              if (AR2 == 1){
-[e $ ! == -> _AR2 `i -> 1 `i 157  ]
-{
-"143
-[; ;lab2.c: 143:                  cont = cont - 1;
-[e = _cont -> - -> _cont `i -> 1 `i `uc ]
-"144
-[; ;lab2.c: 144:                  AR2 = 0;
-[e = _AR2 -> -> 0 `i `uc ]
-"145
-[; ;lab2.c: 145:                  _delay((unsigned long)((25)*(4000000/4000.0)));
+[; ;lab2.c: 141:                  _delay((unsigned long)((25)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 25 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"146
-[; ;lab2.c: 146:              }
-}
-[e :U 157 ]
-"147
-[; ;lab2.c: 147:     }
+"142
+[; ;lab2.c: 142:              }
 }
 [e :U 156 ]
-"148
-[; ;lab2.c: 148:     INTCONbits.RBIF = 0;
-[e = . . _INTCONbits 0 0 -> -> 0 `i `uc ]
-"149
-[; ;lab2.c: 149: }
-[e :UE 151 ]
+"143
+[; ;lab2.c: 143:          }
 }
+[e :U 155 ]
+"144
+[; ;lab2.c: 144:     if (PORTBbits.RB6 == 0){
+[e $ ! == -> . . _PORTBbits 0 6 `i -> 0 `i 157  ]
+{
+"145
+[; ;lab2.c: 145:         AR2 = 1;
+[e = _AR2 -> -> 1 `i `uc ]
+"146
+[; ;lab2.c: 146:     }
+}
+[e $U 158  ]
+"147
+[; ;lab2.c: 147:          else{
+[e :U 157 ]
+{
+"148
+[; ;lab2.c: 148:              if (AR2 == 1){
+[e $ ! == -> _AR2 `i -> 1 `i 159  ]
+{
+"149
+[; ;lab2.c: 149:                  cont = cont - 1;
+[e = _cont -> - -> _cont `i -> 1 `i `uc ]
+"150
+[; ;lab2.c: 150:                  AR2 = 0;
+[e = _AR2 -> -> 0 `i `uc ]
 "151
-[; ;lab2.c: 151: void adc(void){
+[; ;lab2.c: 151:                  _delay((unsigned long)((25)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 25 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"152
+[; ;lab2.c: 152:              }
+}
+[e :U 159 ]
+"153
+[; ;lab2.c: 153:     }
+}
+[e :U 158 ]
+"154
+[; ;lab2.c: 154:     INTCONbits.RBIF = 0;
+[e = . . _INTCONbits 0 0 -> -> 0 `i `uc ]
+"155
+[; ;lab2.c: 155: }
+[e :UE 153 ]
+}
+"157
+[; ;lab2.c: 157: void adc(void){
 [v _adc `(v ~T0 @X0 1 ef ]
 {
 [e :U _adc ]
 [f ]
-"153
-[; ;lab2.c: 153:     AH = ADRESH;
+"159
+[; ;lab2.c: 159:     AH = ADRESH;
 [e = _AH _ADRESH ]
-"155
-[; ;lab2.c: 155:     PIR1bits.ADIF = 0;
+"161
+[; ;lab2.c: 161:     PIR1bits.ADIF = 0;
 [e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
-"156
-[; ;lab2.c: 156: }
-[e :UE 158 ]
-}
 "162
-[; ;lab2.c: 162: void InitTimer0(){
+[; ;lab2.c: 162: }
+[e :UE 160 ]
+}
+"168
+[; ;lab2.c: 168: void InitTimer0(){
 [v _InitTimer0 `(v ~T0 @X0 1 ef ]
 {
 [e :U _InitTimer0 ]
 [f ]
-"163
-[; ;lab2.c: 163:   OPTION_REGbits.T0CS = 0;
+"169
+[; ;lab2.c: 169:   OPTION_REGbits.T0CS = 0;
 [e = . . _OPTION_REGbits 0 3 -> -> 0 `i `uc ]
-"164
-[; ;lab2.c: 164:   OPTION_REGbits.PSA = 0;
-[e = . . _OPTION_REGbits 0 1 -> -> 0 `i `uc ]
-"165
-[; ;lab2.c: 165:   OPTION_REGbits.PS = 0;
-[e = . . _OPTION_REGbits 0 0 -> -> 0 `i `uc ]
-"166
-[; ;lab2.c: 166:   INTCONbits.T0IE = 1;
-[e = . . _INTCONbits 0 5 -> -> 1 `i `uc ]
-"167
-[; ;lab2.c: 167:   TMR0 = 6;
-[e = _TMR0 -> -> 6 `i `uc ]
-"168
-[; ;lab2.c: 168:   INTCONbits.T0IF = 0;
-[e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
 "170
-[; ;lab2.c: 170: }
-[e :UE 159 ]
-}
+[; ;lab2.c: 170:   OPTION_REGbits.PSA = 0;
+[e = . . _OPTION_REGbits 0 1 -> -> 0 `i `uc ]
+"171
+[; ;lab2.c: 171:   OPTION_REGbits.PS = 0;
+[e = . . _OPTION_REGbits 0 0 -> -> 0 `i `uc ]
 "172
-[; ;lab2.c: 172: void Interrupt(){
+[; ;lab2.c: 172:   INTCONbits.T0IE = 1;
+[e = . . _INTCONbits 0 5 -> -> 1 `i `uc ]
+"173
+[; ;lab2.c: 173:   TMR0 = 6;
+[e = _TMR0 -> -> 6 `i `uc ]
+"174
+[; ;lab2.c: 174:   INTCONbits.T0IF = 0;
+[e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
+"176
+[; ;lab2.c: 176: }
+[e :UE 161 ]
+}
+"178
+[; ;lab2.c: 178: void Interrupt(){
 [v _Interrupt `(v ~T0 @X0 1 ef ]
 {
 [e :U _Interrupt ]
 [f ]
-"173
-[; ;lab2.c: 173:     AHM = AH >> 4;
-[e = _AHM -> >> -> _AH `i -> 4 `i `uc ]
-"174
-[; ;lab2.c: 174:     AHL = AH & 0x0F;
-[e = _AHL -> & -> _AH `i -> 15 `i `uc ]
-"175
-[; ;lab2.c: 175:     if (AL == 0){
-[e $ ! == -> _AL `i -> 0 `i 161  ]
-{
-"176
-[; ;lab2.c: 176:         PORTAbits.RA7 = 1;
-[e = . . _PORTAbits 0 7 -> -> 1 `i `uc ]
-"177
-[; ;lab2.c: 177:         SEG(AHM);
-[e ( _SEG (1 _AHM ]
-"178
-[; ;lab2.c: 178:         _delay((unsigned long)((5)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 "179
-[; ;lab2.c: 179:         PORTC = 255;
-[e = _PORTC -> -> 255 `i `uc ]
+[; ;lab2.c: 179:     AHM = AH >> 4;
+[e = _AHM -> >> -> _AH `i -> 4 `i `uc ]
 "180
-[; ;lab2.c: 180:         _delay((unsigned long)((8)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 8 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;lab2.c: 180:     AHL = AH & 0x0F;
+[e = _AHL -> & -> _AH `i -> 15 `i `uc ]
 "181
-[; ;lab2.c: 181:         PORTAbits.RA7 = 0;
-[e = . . _PORTAbits 0 7 -> -> 0 `i `uc ]
-"182
-[; ;lab2.c: 182:         AL = 1;
-[e = _AL -> -> 1 `i `uc ]
-"183
-[; ;lab2.c: 183:     }
-}
-[e $U 162  ]
-"184
-[; ;lab2.c: 184:     else {
-[e :U 161 ]
+[; ;lab2.c: 181:     if (AL == 0){
+[e $ ! == -> _AL `i -> 0 `i 163  ]
 {
-"185
-[; ;lab2.c: 185:         PORTAbits.RA6 = 1;
-[e = . . _PORTAbits 0 6 -> -> 1 `i `uc ]
-"186
-[; ;lab2.c: 186:         SEG(AHL);
-[e ( _SEG (1 _AHL ]
-"187
-[; ;lab2.c: 187:         _delay((unsigned long)((5)*(4000000/4000.0)));
+"182
+[; ;lab2.c: 182:         PORTAbits.RA7 = 1;
+[e = . . _PORTAbits 0 7 -> -> 1 `i `uc ]
+"183
+[; ;lab2.c: 183:         SEG(AHM);
+[e ( _SEG (1 _AHM ]
+"184
+[; ;lab2.c: 184:         _delay((unsigned long)((5)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 5 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"188
-[; ;lab2.c: 188:         PORTC = 255;
+"185
+[; ;lab2.c: 185:         PORTC = 255;
 [e = _PORTC -> -> 255 `i `uc ]
-"190
-[; ;lab2.c: 190:         PORTAbits.RA6 = 0;
-[e = . . _PORTAbits 0 6 -> -> 0 `i `uc ]
-"191
-[; ;lab2.c: 191:         AL = 0;
-[e = _AL -> -> 0 `i `uc ]
-"192
-[; ;lab2.c: 192:     }
+"186
+[; ;lab2.c: 186:         _delay((unsigned long)((8)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 8 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"187
+[; ;lab2.c: 187:         PORTAbits.RA7 = 0;
+[e = . . _PORTAbits 0 7 -> -> 0 `i `uc ]
+"188
+[; ;lab2.c: 188:         AL = 1;
+[e = _AL -> -> 1 `i `uc ]
+"189
+[; ;lab2.c: 189:     }
 }
-[e :U 162 ]
+[e $U 164  ]
+"190
+[; ;lab2.c: 190:     else {
+[e :U 163 ]
+{
+"191
+[; ;lab2.c: 191:         PORTAbits.RA6 = 1;
+[e = . . _PORTAbits 0 6 -> -> 1 `i `uc ]
+"192
+[; ;lab2.c: 192:         SEG(AHL);
+[e ( _SEG (1 _AHL ]
 "193
-[; ;lab2.c: 193:     INTCONbits.T0IF = 0;
-[e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
+[; ;lab2.c: 193:         _delay((unsigned long)((5)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 "194
-[; ;lab2.c: 194:     TMR0 = 6;
-[e = _TMR0 -> -> 6 `i `uc ]
+[; ;lab2.c: 194:         PORTC = 255;
+[e = _PORTC -> -> 255 `i `uc ]
 "196
-[; ;lab2.c: 196: }
-[e :UE 160 ]
+[; ;lab2.c: 196:         PORTAbits.RA6 = 0;
+[e = . . _PORTAbits 0 6 -> -> 0 `i `uc ]
+"197
+[; ;lab2.c: 197:         AL = 0;
+[e = _AL -> -> 0 `i `uc ]
+"198
+[; ;lab2.c: 198:     }
+}
+[e :U 164 ]
+"199
+[; ;lab2.c: 199:     INTCONbits.T0IF = 0;
+[e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
+"200
+[; ;lab2.c: 200:     TMR0 = 6;
+[e = _TMR0 -> -> 6 `i `uc ]
+"202
+[; ;lab2.c: 202: }
+[e :UE 162 ]
 }

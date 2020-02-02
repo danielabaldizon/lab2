@@ -2929,15 +2929,21 @@ INTCONbits.RBIF = 0;
 
 PORTC = 255;
 PORTD = 0;
+PORTAbits.RA5 = 0;
 
 
 
 
 
 while(1){
-    PORTD = AHM;
+    PORTD = cont;
     ADCON0bits.GO = 1;
-
+    if (AH > cont){
+        PORTAbits.RA5 = 1;
+    }
+    else{
+        PORTAbits.RA5 = 0;
+    }
 }
 
 }

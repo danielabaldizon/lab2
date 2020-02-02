@@ -109,6 +109,7 @@ INTCONbits.RBIF = 0;
 //LIMPIEZA DE VARIABLES Y PUERTOS
 PORTC = 255;
 PORTD = 0;
+PORTAbits.RA5 = 0;
 
 
 
@@ -117,7 +118,12 @@ PORTD = 0;
 while(1){
     PORTD = cont;
     ADCON0bits.GO = 1;         //INICIA EL ADC
-    
+    if (AH > cont){ //COMPARACION
+        PORTAbits.RA5 = 1; //ENCENDER ALRM
+    }
+    else{
+        PORTAbits.RA5 = 0; //APAGAR ALRM
+    }
 }
 
 }
@@ -125,7 +131,7 @@ while(1){
 
 void botones (void){
     
-    if (PORTBbits.RB7 == 0){
+    if (PORTBbits.RB7 == 0){ // BOTONES CON ANTIRREBOTE
         AR1 = 1;
     }
          else{
@@ -145,7 +151,7 @@ void botones (void){
                  __delay_ms(25);
              }
     }
-    INTCONbits.RBIF = 0;
+    INTCONbits.RBIF = 0; //BANDERA PORTB
 }
 
 void adc(void){
@@ -170,13 +176,13 @@ void InitTimer0(){
 }
  
 void Interrupt(){
-    AHM = AH >> 4;
-    AHL = AH & 0x0F;
+    AHM = AH >> 4; // CORRE 4 BITS PARA TOMAR LOS MAS SIGNIFICATIVOS
+    AHL = AH & 0x0F; // AND PARA SOLO DEJAR LOS MENOS SIGNIFICATIVOS
     if (AL == 0){
         PORTAbits.RA7 = 1;
         SEG(AHM);
         __delay_ms(5);
-        PORTC = 255;
+        PORTC = 255; // ELIMINA SOMBRA
         __delay_ms(8);
         PORTAbits.RA7 = 0;
         AL = 1;

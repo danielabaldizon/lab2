@@ -11,21 +11,21 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\DANIEL~1\AppData\Local\Temp\sc5g.o
+$C:\Users\DANIEL~1\AppData\Local\Temp\s4ss.o
 reset_vec CODE 0 0 0 3 2
 end_init CODE 0 E E 3 2
 config CONFIG 0 2007 2007 2 2
 $dist/default/production\Laboratorio2.X.production.o
 cinit CODE 0 11 11 E 2
-text1 CODE 0 30D 30D D 2
-text2 CODE 0 31A 31A 9 2
+text1 CODE 0 317 317 D 2
+text2 CODE 0 324 324 9 2
 text3 CODE 0 1F 1F 112 2
-text4 CODE 0 2E7 2E7 26 2
-text5 CODE 0 2AC 2AC 3B 2
-text6 CODE 0 323 323 8 2
+text4 CODE 0 2F1 2F1 26 2
+text5 CODE 0 2B6 2B6 3B 2
+text6 CODE 0 32D 32D 8 2
 text7 CODE 0 21E 21E 53 2
 text8 CODE 0 131 131 ED 2
-maintext CODE 0 271 271 3B 2
+maintext CODE 0 271 271 45 2
 cstackCOMMON COMMON 1 70 70 8 1
 cstackBANK0 BANK0 1 20 20 4 1
 intentry CODE 0 4 4 A 2
@@ -46,22 +46,22 @@ BANK1 A0-EF 1
 BANK2 110-16F 1
 BANK3 190-1EF 1
 CONST 3-3 2
-CONST 32B-1FFF 2
+CONST 335-1FFF 2
 ENTRY 3-3 2
-ENTRY 32B-1FFF 2
+ENTRY 335-1FFF 2
 IDLOC 2000-2003 2
 STACK 110-16F 1
 CODE 3-3 2
-CODE 32B-1FFF 2
+CODE 335-1FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-10F 1
 SFR3 180-18F 1
 EEDATA 2100-21FF 2
 STRCODE 3-3 2
-STRCODE 32B-1FFF 2
+STRCODE 335-1FFF 2
 STRING 3-3 2
-STRING 32B-1FFF 2
+STRING 335-1FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -76,21 +76,21 @@ STRING 32B-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\Laboratorio2.X.production.o
-11 cinit CODE >813:C:\Users\DANIEL~1\AppData\Local\Temp\sc5g.s
-11 cinit CODE >816:C:\Users\DANIEL~1\AppData\Local\Temp\sc5g.s
-11 cinit CODE >851:C:\Users\DANIEL~1\AppData\Local\Temp\sc5g.s
-12 cinit CODE >852:C:\Users\DANIEL~1\AppData\Local\Temp\sc5g.s
-13 cinit CODE >853:C:\Users\DANIEL~1\AppData\Local\Temp\sc5g.s
-14 cinit CODE >854:C:\Users\DANIEL~1\AppData\Local\Temp\sc5g.s
-15 cinit CODE >855:C:\Users\DANIEL~1\AppData\Local\Temp\sc5g.s
-16 cinit CODE >856:C:\Users\DANIEL~1\AppData\Local\Temp\sc5g.s
-17 cinit CODE >859:C:\Users\DANIEL~1\AppData\Local\Temp\sc5g.s
-18 cinit CODE >860:C:\Users\DANIEL~1\AppData\Local\Temp\sc5g.s
-19 cinit CODE >861:C:\Users\DANIEL~1\AppData\Local\Temp\sc5g.s
-1A cinit CODE >862:C:\Users\DANIEL~1\AppData\Local\Temp\sc5g.s
-1B cinit CODE >868:C:\Users\DANIEL~1\AppData\Local\Temp\sc5g.s
-1B cinit CODE >870:C:\Users\DANIEL~1\AppData\Local\Temp\sc5g.s
-1C cinit CODE >871:C:\Users\DANIEL~1\AppData\Local\Temp\sc5g.s
+11 cinit CODE >813:C:\Users\DANIEL~1\AppData\Local\Temp\s4ss.s
+11 cinit CODE >816:C:\Users\DANIEL~1\AppData\Local\Temp\s4ss.s
+11 cinit CODE >851:C:\Users\DANIEL~1\AppData\Local\Temp\s4ss.s
+12 cinit CODE >852:C:\Users\DANIEL~1\AppData\Local\Temp\s4ss.s
+13 cinit CODE >853:C:\Users\DANIEL~1\AppData\Local\Temp\s4ss.s
+14 cinit CODE >854:C:\Users\DANIEL~1\AppData\Local\Temp\s4ss.s
+15 cinit CODE >855:C:\Users\DANIEL~1\AppData\Local\Temp\s4ss.s
+16 cinit CODE >856:C:\Users\DANIEL~1\AppData\Local\Temp\s4ss.s
+17 cinit CODE >859:C:\Users\DANIEL~1\AppData\Local\Temp\s4ss.s
+18 cinit CODE >860:C:\Users\DANIEL~1\AppData\Local\Temp\s4ss.s
+19 cinit CODE >861:C:\Users\DANIEL~1\AppData\Local\Temp\s4ss.s
+1A cinit CODE >862:C:\Users\DANIEL~1\AppData\Local\Temp\s4ss.s
+1B cinit CODE >868:C:\Users\DANIEL~1\AppData\Local\Temp\s4ss.s
+1B cinit CODE >870:C:\Users\DANIEL~1\AppData\Local\Temp\s4ss.s
+1C cinit CODE >871:C:\Users\DANIEL~1\AppData\Local\Temp\s4ss.s
 4 intentry CODE >62:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
 131 text8 CODE >19:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\7SEGMENTOS.c
 132 text8 CODE >20:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\7SEGMENTOS.c
@@ -256,57 +256,57 @@ $dist/default/production\Laboratorio2.X.production.o
 1E2 text8 CODE >180:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\7SEGMENTOS.c
 1E3 text8 CODE >181:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\7SEGMENTOS.c
 21D text8 CODE >182:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\7SEGMENTOS.c
-21E text7 CODE >172:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
-21E text7 CODE >173:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
-22C text7 CODE >174:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
-231 text7 CODE >175:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
-236 text7 CODE >176:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
-237 text7 CODE >177:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
-23D text7 CODE >178:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
-245 text7 CODE >179:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
-249 text7 CODE >180:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
-252 text7 CODE >181:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
-255 text7 CODE >182:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
-257 text7 CODE >183:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
-258 text7 CODE >184:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
-258 text7 CODE >185:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
-259 text7 CODE >186:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
-25F text7 CODE >187:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
-267 text7 CODE >188:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
-26B text7 CODE >190:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
-26C text7 CODE >191:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
-26D text7 CODE >193:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
-26E text7 CODE >194:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
-270 text7 CODE >196:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
-323 text6 CODE >151:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
-323 text6 CODE >153:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
-329 text6 CODE >155:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
-32A text6 CODE >156:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
-2AC text5 CODE >126:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
-2AC text5 CODE >128:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
-2B2 text5 CODE >129:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
-2B4 text5 CODE >130:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
-2B5 text5 CODE >132:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
-2BA text5 CODE >133:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
-2BE text5 CODE >134:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
-2BF text5 CODE >135:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
-2C8 text5 CODE >138:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
-2CE text5 CODE >139:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
-2D0 text5 CODE >140:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
-2D1 text5 CODE >142:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
-2D6 text5 CODE >143:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
-2DB text5 CODE >144:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
-2DC text5 CODE >145:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
-2E5 text5 CODE >148:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
-2E6 text5 CODE >149:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
-2E7 text4 CODE >62:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
-2E7 text4 CODE >63:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
-2EB text4 CODE >64:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
-2F0 text4 CODE >66:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
-2F6 text4 CODE >67:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
-2FB text4 CODE >69:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
-2FF text4 CODE >70:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
-304 text4 CODE >73:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
+21E text7 CODE >178:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
+21E text7 CODE >179:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
+22C text7 CODE >180:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
+231 text7 CODE >181:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
+236 text7 CODE >182:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
+237 text7 CODE >183:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
+23D text7 CODE >184:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
+245 text7 CODE >185:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
+249 text7 CODE >186:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
+252 text7 CODE >187:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
+255 text7 CODE >188:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
+257 text7 CODE >189:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
+258 text7 CODE >190:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
+258 text7 CODE >191:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
+259 text7 CODE >192:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
+25F text7 CODE >193:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
+267 text7 CODE >194:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
+26B text7 CODE >196:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
+26C text7 CODE >197:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
+26D text7 CODE >199:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
+26E text7 CODE >200:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
+270 text7 CODE >202:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
+32D text6 CODE >157:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
+32D text6 CODE >159:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
+333 text6 CODE >161:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
+334 text6 CODE >162:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
+2B6 text5 CODE >132:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
+2B6 text5 CODE >134:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
+2BC text5 CODE >135:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
+2BE text5 CODE >136:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
+2BF text5 CODE >138:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
+2C4 text5 CODE >139:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
+2C8 text5 CODE >140:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
+2C9 text5 CODE >141:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
+2D2 text5 CODE >144:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
+2D8 text5 CODE >145:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
+2DA text5 CODE >146:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
+2DB text5 CODE >148:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
+2E0 text5 CODE >149:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
+2E5 text5 CODE >150:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
+2E6 text5 CODE >151:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
+2EF text5 CODE >154:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
+2F0 text5 CODE >155:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
+2F1 text4 CODE >62:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
+2F1 text4 CODE >63:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
+2F5 text4 CODE >64:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
+2FA text4 CODE >66:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
+300 text4 CODE >67:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
+305 text4 CODE >69:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
+309 text4 CODE >70:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
+30E text4 CODE >73:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
 1F text3 CODE >12:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\ADC.c
 22 text3 CODE >13:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\ADC.c
 23 text3 CODE >14:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\ADC.c
@@ -393,20 +393,20 @@ E1 text3 CODE >103:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.
 11E text3 CODE >110:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\ADC.c
 11F text3 CODE >111:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\ADC.c
 130 text3 CODE >112:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\ADC.c
-31A text2 CODE >114:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\ADC.c
-31A text2 CODE >115:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\ADC.c
-31D text2 CODE >116:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\ADC.c
-320 text2 CODE >117:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\ADC.c
-321 text2 CODE >118:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\ADC.c
-322 text2 CODE >119:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\ADC.c
-30D text1 CODE >162:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
-30D text1 CODE >163:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
-310 text1 CODE >164:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
-311 text1 CODE >165:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
-313 text1 CODE >166:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
-314 text1 CODE >167:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
-318 text1 CODE >168:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
-319 text1 CODE >170:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
+324 text2 CODE >114:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\ADC.c
+324 text2 CODE >115:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\ADC.c
+327 text2 CODE >116:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\ADC.c
+32A text2 CODE >117:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\ADC.c
+32B text2 CODE >118:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\ADC.c
+32C text2 CODE >119:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\ADC.c
+317 text1 CODE >168:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
+317 text1 CODE >169:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
+31A text1 CODE >170:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
+31B text1 CODE >171:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
+31D text1 CODE >172:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
+31E text1 CODE >173:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
+322 text1 CODE >174:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
+323 text1 CODE >176:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
 271 maintext CODE >75:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
 271 maintext CODE >77:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
 274 maintext CODE >78:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
@@ -433,8 +433,14 @@ E1 text3 CODE >103:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.
 29F maintext CODE >106:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
 2A0 maintext CODE >110:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
 2A4 maintext CODE >111:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
-2A5 maintext CODE >118:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
-2A7 maintext CODE >119:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
+2A5 maintext CODE >112:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
+2A6 maintext CODE >119:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
+2A8 maintext CODE >120:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
+2A9 maintext CODE >121:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
+2AF maintext CODE >122:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
+2B0 maintext CODE >123:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
+2B1 maintext CODE >124:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
+2B1 maintext CODE >125:C:\Users\Daniela Baldizon\Documents\GitHub\lab2\Laboratorio2.X\lab2.c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -454,27 +460,27 @@ __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
 __CFG_IESO$OFF 0 0 ABS 0 - dist/default/production\Laboratorio2.X.production.o
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
-_AH 79 0 COMMON 1 bssCOMMON dist/default/production\Laboratorio2.X.production.o
+_AH 24 0 BANK0 1 bssBANK0 dist/default/production\Laboratorio2.X.production.o
 _AL 7A 0 COMMON 1 bssCOMMON dist/default/production\Laboratorio2.X.production.o
 __Hstrings 0 0 ABS 0 strings -
 _TMR0 1 0 ABS 0 - dist/default/production\Laboratorio2.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\DANIEL~1\AppData\Local\Temp\sc5g.o
-_cont 7D 0 COMMON 1 bssCOMMON dist/default/production\Laboratorio2.X.production.o
+___sp 0 0 STACK 2 stack C:\Users\DANIEL~1\AppData\Local\Temp\s4ss.o
+_cont 25 0 BANK0 1 bssBANK0 dist/default/production\Laboratorio2.X.production.o
 _main 4E2 0 CODE 0 maintext dist/default/production\Laboratorio2.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\Laboratorio2.X.production.o
-start 1C 0 CODE 0 init C:\Users\DANIEL~1\AppData\Local\Temp\sc5g.o
+start 1C 0 CODE 0 init C:\Users\DANIEL~1\AppData\Local\Temp\s4ss.o
 __CFG_BOREN$OFF 0 0 ABS 0 - dist/default/production\Laboratorio2.X.production.o
 __size_of_main 0 0 ABS 0 - dist/default/production\Laboratorio2.X.production.o
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
 _OPTION_REGbits 81 0 ABS 0 - dist/default/production\Laboratorio2.X.production.o
 __Hpowerup 0 0 CODE 0 powerup -
 __size_of_botones 0 0 ABS 0 - dist/default/production\Laboratorio2.X.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\DANIEL~1\AppData\Local\Temp\sc5g.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\DANIEL~1\AppData\Local\Temp\sc5g.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\DANIEL~1\AppData\Local\Temp\sc5g.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\DANIEL~1\AppData\Local\Temp\sc5g.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\DANIEL~1\AppData\Local\Temp\sc5g.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\DANIEL~1\AppData\Local\Temp\sc5g.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\DANIEL~1\AppData\Local\Temp\s4ss.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\DANIEL~1\AppData\Local\Temp\s4ss.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\DANIEL~1\AppData\Local\Temp\s4ss.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\DANIEL~1\AppData\Local\Temp\s4ss.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\DANIEL~1\AppData\Local\Temp\s4ss.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\DANIEL~1\AppData\Local\Temp\s4ss.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 _OSCCONbits 8F 0 ABS 0 - dist/default/production\Laboratorio2.X.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\Laboratorio2.X.production.o
@@ -482,27 +488,27 @@ __Hfunctab 0 0 ENTRY 0 functab -
 __Hclrtext 0 0 ABS 0 clrtext -
 _ADRESH 1E 0 ABS 0 - dist/default/production\Laboratorio2.X.production.o
 _ADRESL 9E 0 ABS 0 - dist/default/production\Laboratorio2.X.production.o
-_InitTimer0 61A 0 CODE 0 text1 dist/default/production\Laboratorio2.X.production.o
+_InitTimer0 62E 0 CODE 0 text1 dist/default/production\Laboratorio2.X.production.o
 _ANSELH 189 0 ABS 0 - dist/default/production\Laboratorio2.X.production.o
 __end_of_Interrupt 4E2 0 CODE 0 text7 dist/default/production\Laboratorio2.X.production.o
 __size_of_Interrupt 0 0 ABS 0 - dist/default/production\Laboratorio2.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
 _OPTION_REG 81 0 ABS 0 - dist/default/production\Laboratorio2.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\DANIEL~1\AppData\Local\Temp\sc5g.o
-___stacklo 0 0 ABS 0 - C:\Users\DANIEL~1\AppData\Local\Temp\sc5g.o
+___stackhi 0 0 ABS 0 - C:\Users\DANIEL~1\AppData\Local\Temp\s4ss.o
+___stacklo 0 0 ABS 0 - C:\Users\DANIEL~1\AppData\Local\Temp\s4ss.o
 _Interrupt 43C 0 CODE 0 text7 dist/default/production\Laboratorio2.X.production.o
-__end_of_botones 5CE 0 CODE 0 text5 dist/default/production\Laboratorio2.X.production.o
+__end_of_botones 5E2 0 CODE 0 text5 dist/default/production\Laboratorio2.X.production.o
 __CFG_FCMEN$OFF 0 0 ABS 0 - dist/default/production\Laboratorio2.X.production.o
 __CFG_MCLRE$OFF 0 0 ABS 0 - dist/default/production\Laboratorio2.X.production.o
 _WPUBbits 95 0 ABS 0 - dist/default/production\Laboratorio2.X.production.o
 start_initialization 22 0 CODE 0 cinit dist/default/production\Laboratorio2.X.production.o
 ADC_CONFIG@justif 20 0 BANK0 1 cstackBANK0 dist/default/production\Laboratorio2.X.production.o
-__end_of_InitTimer0 634 0 CODE 0 text1 dist/default/production\Laboratorio2.X.production.o
+__end_of_InitTimer0 648 0 CODE 0 text1 dist/default/production\Laboratorio2.X.production.o
 _TRISAbits 85 0 ABS 0 - dist/default/production\Laboratorio2.X.production.o
 _TRISBbits 86 0 ABS 0 - dist/default/production\Laboratorio2.X.production.o
 _TRISEbits 89 0 ABS 0 - dist/default/production\Laboratorio2.X.production.o
 __pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\Laboratorio2.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\DANIEL~1\AppData\Local\Temp\sc5g.o
+___int_sp 0 0 STACK 2 stack C:\Users\DANIEL~1\AppData\Local\Temp\s4ss.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -544,26 +550,26 @@ __Ltext 0 0 ABS 0 text -
 __LcstackBANK0 0 0 ABS 0 cstackBANK0 -
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 _AHL 78 0 COMMON 1 bssCOMMON dist/default/production\Laboratorio2.X.production.o
-_AHM 24 0 BANK0 1 bssBANK0 dist/default/production\Laboratorio2.X.production.o
-_AR1 7C 0 COMMON 1 bssCOMMON dist/default/production\Laboratorio2.X.production.o
-_AR2 7B 0 COMMON 1 bssCOMMON dist/default/production\Laboratorio2.X.production.o
-_ISR 5CE 0 CODE 0 text4 dist/default/production\Laboratorio2.X.production.o
+_AHM 79 0 COMMON 1 bssCOMMON dist/default/production\Laboratorio2.X.production.o
+_AR1 7D 0 COMMON 1 bssCOMMON dist/default/production\Laboratorio2.X.production.o
+_AR2 7C 0 COMMON 1 bssCOMMON dist/default/production\Laboratorio2.X.production.o
+_ISR 5E2 0 CODE 0 text4 dist/default/production\Laboratorio2.X.production.o
 _SEG 262 0 CODE 0 text8 dist/default/production\Laboratorio2.X.production.o
 __S0 2009 0 ABS 0 - -
 __S1 7E 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
-_adc 646 0 CODE 0 text6 dist/default/production\Laboratorio2.X.production.o
+_adc 65A 0 CODE 0 text6 dist/default/production\Laboratorio2.X.production.o
 __CFG_BOR4V$BOR40V 0 0 ABS 0 - dist/default/production\Laboratorio2.X.production.o
 saved_w 7E 0 ABS 0 - dist/default/production\Laboratorio2.X.production.o
 __CFG_FOSC$INTRC_NOCLKOUT 0 0 ABS 0 - dist/default/production\Laboratorio2.X.production.o
 __end_of_ADC_CONFIG 262 0 CODE 0 text3 dist/default/production\Laboratorio2.X.production.o
-__end_of_ISR 61A 0 CODE 0 text4 dist/default/production\Laboratorio2.X.production.o
+__end_of_ISR 62E 0 CODE 0 text4 dist/default/production\Laboratorio2.X.production.o
 __end_of_SEG 43C 0 CODE 0 text8 dist/default/production\Laboratorio2.X.production.o
-__end_of_adc 656 0 CODE 0 text6 dist/default/production\Laboratorio2.X.production.o
+__end_of_adc 66A 0 CODE 0 text6 dist/default/production\Laboratorio2.X.production.o
 ADC_CONFIG@canal 23 0 BANK0 1 cstackBANK0 dist/default/production\Laboratorio2.X.production.o
 __Lintentry 8 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\DANIEL~1\AppData\Local\Temp\sc5g.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\DANIEL~1\AppData\Local\Temp\s4ss.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
 _PIE1bits 8C 0 ABS 0 - dist/default/production\Laboratorio2.X.production.o
 __pmaintext 4E2 0 CODE 0 maintext dist/default/production\Laboratorio2.X.production.o
@@ -573,7 +579,7 @@ __Lconfig 400E 0 CONFIG 0 config -
 __CFG_CP$OFF 0 0 ABS 0 - dist/default/production\Laboratorio2.X.production.o
 __size_of_InitTimer0 0 0 ABS 0 - dist/default/production\Laboratorio2.X.production.o
 __CFG_WDTE$OFF 0 0 ABS 0 - dist/default/production\Laboratorio2.X.production.o
-_botones 558 0 CODE 0 text5 dist/default/production\Laboratorio2.X.production.o
+_botones 56C 0 CODE 0 text5 dist/default/production\Laboratorio2.X.production.o
 _ADCON0bits 1F 0 ABS 0 - dist/default/production\Laboratorio2.X.production.o
 _ADCON1bits 9F 0 ABS 0 - dist/default/production\Laboratorio2.X.production.o
 __CFG_LVP$OFF 0 0 ABS 0 - dist/default/production\Laboratorio2.X.production.o
@@ -582,7 +588,7 @@ __Lspace_1 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -
 __Lspace_3 0 0 ABS 0 - -
 __pbssCOMMON 78 0 COMMON 1 bssCOMMON dist/default/production\Laboratorio2.X.production.o
-_ADC_INTERRUPT 634 0 CODE 0 text2 dist/default/production\Laboratorio2.X.production.o
+_ADC_INTERRUPT 648 0 CODE 0 text2 dist/default/production\Laboratorio2.X.production.o
 __HcstackBANK0 0 0 ABS 0 cstackBANK0 -
 _PIR1bits C 0 ABS 0 - dist/default/production\Laboratorio2.X.production.o
 __Lend_init 1C 0 CODE 0 end_init -
@@ -592,12 +598,12 @@ __Hintentry 1C 0 CODE 0 intentry -
 __Lstrings 0 0 ABS 0 strings -
 __Hreset_vec 6 0 CODE 0 reset_vec -
 __HbssBANK0 0 0 ABS 0 bssBANK0 -
-__ptext1 61A 0 CODE 0 text1 dist/default/production\Laboratorio2.X.production.o
-__ptext2 634 0 CODE 0 text2 dist/default/production\Laboratorio2.X.production.o
+__ptext1 62E 0 CODE 0 text1 dist/default/production\Laboratorio2.X.production.o
+__ptext2 648 0 CODE 0 text2 dist/default/production\Laboratorio2.X.production.o
 __ptext3 3E 0 CODE 0 text3 dist/default/production\Laboratorio2.X.production.o
-__ptext4 5CE 0 CODE 0 text4 dist/default/production\Laboratorio2.X.production.o
-__ptext5 558 0 CODE 0 text5 dist/default/production\Laboratorio2.X.production.o
-__ptext6 646 0 CODE 0 text6 dist/default/production\Laboratorio2.X.production.o
+__ptext4 5E2 0 CODE 0 text4 dist/default/production\Laboratorio2.X.production.o
+__ptext5 56C 0 CODE 0 text5 dist/default/production\Laboratorio2.X.production.o
+__ptext6 65A 0 CODE 0 text6 dist/default/production\Laboratorio2.X.production.o
 __ptext7 43C 0 CODE 0 text7 dist/default/production\Laboratorio2.X.production.o
 __ptext8 262 0 CODE 0 text8 dist/default/production\Laboratorio2.X.production.o
 __Lpowerup 0 0 CODE 0 powerup -
@@ -611,7 +617,7 @@ _ANSELbits 188 0 ABS 0 - dist/default/production\Laboratorio2.X.production.o
 __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\Laboratorio2.X.production.o
 __Hend_init 22 0 CODE 0 end_init -
 __size_of_ADC_INTERRUPT 0 0 ABS 0 - dist/default/production\Laboratorio2.X.production.o
-__end_of_main 558 0 CODE 0 maintext dist/default/production\Laboratorio2.X.production.o
+__end_of_main 56C 0 CODE 0 maintext dist/default/production\Laboratorio2.X.production.o
 _ANSEL 188 0 ABS 0 - dist/default/production\Laboratorio2.X.production.o
 _PORTC 7 0 ABS 0 - dist/default/production\Laboratorio2.X.production.o
 _PORTD 8 0 ABS 0 - dist/default/production\Laboratorio2.X.production.o
@@ -630,7 +636,7 @@ __initialization 22 0 CODE 0 cinit dist/default/production\Laboratorio2.X.produc
 __CFG_PWRTE$OFF 0 0 ABS 0 - dist/default/production\Laboratorio2.X.production.o
 __pbssBANK0 24 0 BANK0 1 bssBANK0 dist/default/production\Laboratorio2.X.production.o
 __CFG_WRT$OFF 0 0 ABS 0 - dist/default/production\Laboratorio2.X.production.o
-__end_of_ADC_INTERRUPT 646 0 CODE 0 text2 dist/default/production\Laboratorio2.X.production.o
+__end_of_ADC_INTERRUPT 65A 0 CODE 0 text2 dist/default/production\Laboratorio2.X.production.o
 _ANSELHbits 189 0 ABS 0 - dist/default/production\Laboratorio2.X.production.o
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
@@ -659,7 +665,7 @@ _ANSELHbits 189 0 ABS 0 - dist/default/production\Laboratorio2.X.production.o
 %SEGMENTS
 cstackCOMMON 1 70 70 E 1
 cstackBANK0 1 20 20 6 1
-intentry 0 4 8 327 2
+intentry 0 4 8 331 2
 reset_vec 0 0 0 3 2
 config 0 2007 400E 2 2
 # OTES Section
