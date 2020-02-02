@@ -704,8 +704,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;lab2.c: 140:                  AR1 = 0;
 [e = _AR1 -> -> 0 `i `uc ]
 "141
-[; ;lab2.c: 141:                  _delay((unsigned long)((25)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 25 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;lab2.c: 141:                  _delay((unsigned long)((20)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 "142
 [; ;lab2.c: 142:              }
 }
@@ -740,8 +740,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;lab2.c: 150:                  AR2 = 0;
 [e = _AR2 -> -> 0 `i `uc ]
 "151
-[; ;lab2.c: 151:                  _delay((unsigned long)((25)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 25 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;lab2.c: 151:                  _delay((unsigned long)((20)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 "152
 [; ;lab2.c: 152:              }
 }

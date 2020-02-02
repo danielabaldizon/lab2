@@ -138,7 +138,7 @@ void botones (void){
              if (AR1 == 1){
                  cont++;
                  AR1 = 0;
-                 __delay_ms(25);
+                 __delay_ms(20);
              }
          }
     if (PORTBbits.RB6 == 0){
@@ -148,7 +148,7 @@ void botones (void){
              if (AR2 == 1){
                  cont = cont - 1;
                  AR2 = 0;
-                 __delay_ms(25);
+                 __delay_ms(20);
              }
     }
     INTCONbits.RBIF = 0; //BANDERA PORTB

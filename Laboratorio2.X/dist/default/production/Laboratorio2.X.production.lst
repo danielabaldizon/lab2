@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.10 build 88905656 
-                                                                                               Sun Feb 02 01:20:50 2020
+                                                                                               Sun Feb 02 01:48:22 2020
 
 Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1 
      1                           	processor	16F887
@@ -1612,10 +1612,10 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1596  02C8  01FD               	clrf	_AR1
   1597  02C9                     i1l1178:	
   1598                           
-  1599                           ;lab2.c: 141:                  _delay((unsigned long)((25)*(4000000/4000.0)));
-  1600  02C9  3021               	movlw	33
+  1599                           ;lab2.c: 141:                  _delay((unsigned long)((20)*(4000000/4000.0)));
+  1600  02C9  301A               	movlw	26
   1601  02CA  00F1               	movwf	??_botones+1
-  1602  02CB  3076               	movlw	118
+  1602  02CB  30F8               	movlw	248
   1603  02CC  00F0               	movwf	??_botones
   1604  02CD                     u21_27:	
   1605  02CD  0BF0               	decfsz	??_botones,f
@@ -1666,10 +1666,10 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1650  02E5  01FC               	clrf	_AR2
   1651  02E6                     i1l1190:	
   1652                           
-  1653                           ;lab2.c: 151:                  _delay((unsigned long)((25)*(4000000/4000.0)));
-  1654  02E6  3021               	movlw	33
+  1653                           ;lab2.c: 151:                  _delay((unsigned long)((20)*(4000000/4000.0)));
+  1654  02E6  301A               	movlw	26
   1655  02E7  00F1               	movwf	??_botones+1
-  1656  02E8  3076               	movlw	118
+  1656  02E8  30F8               	movlw	248
   1657  02E9  00F0               	movwf	??_botones
   1658  02EA                     u22_27:	
   1659  02EA  0BF0               	decfsz	??_botones,f
@@ -2385,7 +2385,7 @@ DATA                 0      0      14      12        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.10 build 88905656 
-Symbol Table                                                                                   Sun Feb 02 01:20:50 2020
+Symbol Table                                                                                   Sun Feb 02 01:48:22 2020
 
      __size_of_ADC_CONFIG 0112               __CFG_CP$OFF 0000           ADC_CONFIG@canal 0023  
                       l30 0038                        _AH 0024                        l31 0045  

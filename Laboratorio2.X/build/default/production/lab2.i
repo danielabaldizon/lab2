@@ -2958,7 +2958,7 @@ void botones (void){
              if (AR1 == 1){
                  cont++;
                  AR1 = 0;
-                 _delay((unsigned long)((25)*(4000000/4000.0)));
+                 _delay((unsigned long)((20)*(4000000/4000.0)));
              }
          }
     if (PORTBbits.RB6 == 0){
@@ -2968,7 +2968,7 @@ void botones (void){
              if (AR2 == 1){
                  cont = cont - 1;
                  AR2 = 0;
-                 _delay((unsigned long)((25)*(4000000/4000.0)));
+                 _delay((unsigned long)((20)*(4000000/4000.0)));
              }
     }
     INTCONbits.RBIF = 0;
